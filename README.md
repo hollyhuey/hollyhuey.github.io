@@ -1,2 +1,2 @@
 # hollyhuey.github.io
-# Some stuff I'm working on to share with other people! 
+Some stuff I'm working on to share with other people! 
