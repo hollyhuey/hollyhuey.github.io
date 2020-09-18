@@ -1,4 +1,4 @@
-/* landing page */
+/* GENERAL SITE STYLE*/
 p, h1 {
   font-family: 'Roboto', sans-serif;
 }
@@ -7,6 +7,71 @@ p, h1 {
   background-image: url(norm-site-icons/scribble5.png);
 }
 
+.text {
+  line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.line-transition {
+  -webkit-box-shadow: 0px 15px 10px -15px #ccc;
+  box-shadow: 0px 15px 10px -15px #ccc;
+  padding-bottom: 65px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+@media (min-width: 576px) {.container {
+  max-width: 540px;
+}
+
+
+h1 {
+  font-size: 2em;
+  text-align: left;
+}
+
+.urls {
+  color: #09AD94;
+  text-decoration: none;
+}
+
+/* LANDING PAGE */
+/* text */
+#landing-page-content {
+  /* border: 2px solid blue; */
+  text-align: center;
+  height: 100vh;
+}
+
+#hero-content {
+  margin-top: 15%;
+  margin-bottom: 30%;
+  /* border: 2px solid green; */
+}
+
+#hero-header {
+  line-height: 125px;
+  font-size: 75px;
+}
+
+#hero-description,
+#hero-navigation-bar {
+  font-size: 25px;
+}
+
+.dot {
+  font-size: 100px;
+  color: #09AD94;
+}
+
+.landing-text {
+  line-height: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* fade in hero-text */
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
@@ -76,40 +141,7 @@ p, h1 {
   animation-duration: 1s;
 }
 
-#landing-page-content {
-  /* border: 2px solid blue; */
-  text-align: center;
-  height: 100vh;
-}
-
-#hero-content {
-  margin-top: 15%;
-  margin-bottom: 30%;
-  /* border: 2px solid green; */
-}
-
-#hero-header {
-  line-height: 125px;
-  font-size: 75px;
-  /* border: 2px solid red; */
-}
-
-#hero-description,
-#hero-navigation-bar {
-  font-size: 25px;
-}
-
-.dot {
-  font-size: 100px;
-  color: #09AD94;
-}
-
-.landing-text {
-  line-height: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* main bio page */
+/* ABOUT PAGE */
 #bio-header {
   text-align: left;
   font-size: 25px;
@@ -121,11 +153,13 @@ p, h1 {
   padding-left: 50px;
   padding-bottom: 10px;
   padding-top: 30px;
+  height: 500px;
+  float: right;
 }
 
-.text {
-  line-height: 30px;
-  font-family: 'Roboto', sans-serif;
+headshot-span {
+  /* display: inline-block; */
+  float: right;
 }
 
 .bio-text {
@@ -145,30 +179,7 @@ p, h1 {
   font-size: 25px;
 }
 
-#headshot {
-  height: 500px;
-  float: right;
-}
-
-headshot-span {
-  /* display: inline-block; */
-  float: right;
-}
-
-.line-transition {
-  -webkit-box-shadow: 0px 15px 10px -15px #ccc;
-  box-shadow: 0px 15px 10px -15px #ccc;
-  padding-bottom: 65px;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-@media (min-width: 576px) {.container {
-  max-width: 540px;
-}
-
+/* SITE FOOTER */
 #social-wrappper {
   display: block;
   text-align: center;
@@ -235,16 +246,6 @@ input, button, select, optgroup, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-}
-
-h1 {
-  font-size: 2em;
-  text-align: left;
-}
-
-.urls {
-  color: #09AD94;
-  text-decoration: none;
 }
 
 nav ul {
