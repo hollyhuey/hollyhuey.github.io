@@ -151,12 +151,13 @@ p, h1 {
 }
 
 headshot-span {
-  display: inline-block;
+  /* display: inline-block; */
   float: right;
 }
 
 .line-transition {
   -webkit-box-shadow: 0px 15px 10px -15px #ccc;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   padding-bottom: 65px;
 }
 
@@ -164,7 +165,7 @@ headshot-span {
   text-align: center !important;
 }
 
-@media (min-width: 576px) .container {
+@media (min-width: 576px) {.container {
   max-width: 540px;
 }
 
@@ -380,7 +381,7 @@ ul.publications li {
 }
 
 .study-icons:hover {
-  webkit-filter: blur(10px);
+  -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 
@@ -486,5 +487,4 @@ ul.publications li {
   -webkit-animation-name: bounce;
   animation-name: bounce;
 }
-
-*/
+}
