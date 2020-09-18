@@ -42,12 +42,13 @@ h1 {
 #landing-page-content {
   /* border: 2px solid blue; */
   text-align: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 #hero-content {
   margin-top: 15%;
-  margin-bottom: 30%;
+  margin-bottom: 0%;
+  /* margin-bottom: 30%; */
   /* border: 2px solid green; */
 }
 
