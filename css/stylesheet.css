@@ -383,8 +383,8 @@ ul.publications li {
 }
 
 .study-icons:hover {
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
 }
 
 .study-wrapper {
@@ -398,26 +398,40 @@ ul.publications li {
   position: relative;
   height: 255px;
   width: 300px;
+  display: inline-block;
+  z-index: 1;
 }
 
 .img__description_layer {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 10;
-  right: 0;
-  /* background: rgba(36, 62, 206, 0.6); */
-  color: black;
+  /* top: 50%; */
+  /* left: 45%; */
+  top: 50px;
+  left: 30px;
+    height: 100px;
+  width: 280px;
+  /* Transform:translate(-50%,-50%); */
+  color: white;
   visibility: hidden;
   opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
+  border: 2px solid blue;
+  background-color: blue;
+  z-index: 2;
+  /* -webkit-filter: blur(6px);
+  filter: blur(6px); */
+}
 }
 
 .img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__wrap:hover .img__description {
   visibility: visible;
   opacity: 1;
 }
@@ -488,5 +502,4 @@ ul.publications li {
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
-}
 }
