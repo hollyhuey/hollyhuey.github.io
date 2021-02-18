@@ -7,6 +7,10 @@ p, h1 {
   background-image: url(norm-site-icons/scribble5.png);
 }
 
+#background {
+  background-image: url(norm-site-icons/landing.png);
+}
+
 .text {
   line-height: 30px;
   font-family: 'Roboto', sans-serif;
