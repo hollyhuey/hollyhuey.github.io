@@ -5,13 +5,15 @@ p, h1 {
 
 #background {
   background-image: url(norm-site-icons/scribble5.png);
-  background-repeat: no-repeat;
+  background-position: 50%;
+  background-repeat: repeat-y;
 }
 
 #landing_background {
   background-image: url(norm-site-icons/landing2.png);
-  background-size: 1200px;
-  background-position: 75px -20px;
+  /* background-size: 1200px; */
+  background-size: 90%;
+  background-position: 50% 0%;
   border: 2px solid white;
   background-repeat: no-repeat;
 }
