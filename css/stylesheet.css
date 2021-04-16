@@ -7,6 +7,7 @@ p, h1 {
   background-image: url(norm-site-icons/scribble5.png);
   background-position: 50%;
   background-repeat: repeat-y;
+  z-index: 0
 }
 
 #landing_background {
@@ -14,8 +15,9 @@ p, h1 {
   /* background-size: 1200px; */
   background-size: 90%;
   background-position: 50% 0%;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   background-repeat: no-repeat;
+  z-index: 1
 }
 
 .text {
