@@ -3,6 +3,11 @@ p, h1 {
   font-family: 'Roboto', sans-serif;
 }
 
+.bold-text {
+  /* font-weight: 700; */
+  font-weight: bolder;
+}
+
 #background {
   background-image: url(norm-site-icons/scribble5.png);
   background-position: 50%;
