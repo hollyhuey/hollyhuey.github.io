@@ -4,8 +4,8 @@ p, h1 {
 }
 
 bold-text {
-  /* font-weight: 700; */
-  font-weight: bolder;
+  font-weight: 1000;
+  /* font-weight: bolder; */
 }
 
 #background {
