@@ -3,7 +3,7 @@ p, h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-.bold-text {
+bold-text {
   /* font-weight: 700; */
   font-weight: bolder;
 }
