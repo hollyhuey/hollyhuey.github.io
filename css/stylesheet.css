@@ -9,6 +9,7 @@ bold-text {
 
 author-bold-text {
   font-weight: bolder;
+  /* https://stackoverflow.com/questions/39467482/increase-font-weight-bold-thickness */
   text-shadow: 0px 0.25px, 0.25px 0px, 0.25px 0.25px;
 }
 
