@@ -8,6 +8,10 @@ bold-text {
   font-weight: bolder;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 author-bold-text {
   font-weight: bolder;
   /* https://stackoverflow.com/questions/39467482/increase-font-weight-bold-thickness */
