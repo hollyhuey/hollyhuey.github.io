@@ -36,7 +36,7 @@ author-bold-text {
   background-image: url(norm-site-icons/trans_landing.png);
   /* background-size: 1200px; */
   background-size: 87%;
-  background-position: 50% 0%;
+  background-position: 50% 50%;
   border: 2px solid white;
   background-repeat: no-repeat;
 }
@@ -76,13 +76,14 @@ author-bold-text {
   #landing-page-content {
     /* border: 2px solid blue; */
     text-align: center;
-    height: 80vh;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
   }
 
   #hero-content {
-    margin-top: 15%;
-    margin-bottom: 0%;
-    /* margin-bottom: 30%; */
+    margin-bottom: 15%;
+    align-self: center;
     /* border: 2px solid green; */
   }
 
