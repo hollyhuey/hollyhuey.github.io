@@ -179,9 +179,23 @@ author-bold-text {
 
   /* ABOUT PAGE */
   #bio-header {
+    display: block;
     text-align: left;
     font-size: 25px;
+    /* height: 75px; */
+    /* border: 2px solid blue; */
+  }
+
+  #about {
+    display: block;
+    position: relative;
     height: 50px;
+    /* border: 2px solid red; */
+  }
+
+  #bio-text {
+    display: block;
+    /* border: 2px solid green; */
   }
 
   #headshot {
