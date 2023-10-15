@@ -1,4 +1,3 @@
 # personal website
-under construction -- check back in later!
-
-hollyhuey.github.io
+custom domain: hollyhuey.com
+github domain: hollyhuey.github.io
