@@ -1,11 +1,11 @@
 /* GENERAL SITE STYLE*/
 p, h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
 }
 
 bold-text {
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 html {
@@ -13,11 +13,12 @@ html {
 }
 
 author-bold-text {
-  font-weight: bolder;
+  font-weight: 800;
   /* https://stackoverflow.com/questions/39467482/increase-font-weight-bold-thickness */
   text-shadow: 0px 0.25px, 0.25px 0px, 0.25px 0.25px;
 }
 
+/* GRID FOR RESEARCH */
 .grid-container {
   display: grid;
   grid-template-columns: 31.5% 31.5% 31.5%;
@@ -43,7 +44,7 @@ author-bold-text {
 
 .text {
   line-height: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 .line-transition {
@@ -104,7 +105,7 @@ author-bold-text {
 
   .landing-text {
     line-height: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
   }
 
   /* fade in hero-text */
@@ -225,7 +226,7 @@ author-bold-text {
 
   #typing-text {
     color: #09AD94;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 25px;
   }
 
