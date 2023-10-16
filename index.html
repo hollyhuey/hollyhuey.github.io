@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content>
   <meta name="author" content>
   <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
@@ -12,9 +12,17 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <!-- add browser tab icon -->
-  <link rel="shortcut icon" type="image/png" href="assets/norm-site-icons/favicon.png">
+  <!-- /* Large devices: desktops, 992px, and up */ -->
+  <link rel="stylesheet" type="text/css" href="css/stylesheet-desktop.css" media="only screen and (max-width: 1920px)">
+  <!-- /* Large devices: desktops, 992px, and up */ -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/stylesheet-tablet.css" media="only screen and (max-width: 768px)"> -->
+  <!-- /* Large devices: desktops, 992px, and up */ -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/stylesheet-mobile.css" media="only screen and (max-width: 576px)"> -->
+  <link rel="stylesheet" href="css/stylesheet-animated-hero.css">
+  <!-- <link rel="stylesheet" href="css/stylesheet-archive.css"> -->
+    <!-- <link rel="stylesheet" href="css/stylesheet-menu.css"> -->
+  <link rel="shortcut icon" type="image/png" href="assets/norm-site-icons/favicon.png"> 
+  <script type="text/javascript" src="js/animation.js"></script>
 </head>
 
 <body>
@@ -51,11 +59,9 @@
     </div>
 
     <!-- About -->
-    <!-- <div id="background"> -->
     <div id="wrapper" class="text bio-text">
       <div id="headshot-content">
         <headshot-span>
-          <!-- <img id="headshot" src="assets/photos/headshot-sketch2.png"> -->
           <img id="headshot" src="assets/photos/headshot.png">
         </headshot-span>
       </div>
@@ -65,111 +71,170 @@
             <h4>How do we use visual media to <span id="typing-text"></span></h4>
           </a></div>
         <div id="bio-text">
-          <p>Hi there! I'm a 5th-year PhD Candidate in Experimental Psychology at the University of California San Diego.</p>
+        <div style="margin-bottom: 2em">
+          <p>Hi there! I'm a 5th-year PhD Candidate in Experimental Psychology at the 
+            University of California San Diego.
+            <br>
+            I'm advised by Dr. Judith Fan @ 
+            <a href="https://cogtoolslab.github.io/" target="_blank" class="external">The Cognitive Tools Lab</a>.</p>
 
           <p>My research uses large-scale crowdsourcing techniques to benchmark how people create and interact with visual media. 
             In my graduate research, I've specialized in conducting a wide range of visuospatial & generative behavioral tasks to
-            study human visual communication in domains like sketching, abstract diagrams, and data visualizations. 
+            study human visual communication. 
             I've also conducted developmental research using drawing to study children's conceptual development of visual object concepts. </p>
             
-            <p>By developing quantative characterizations of these behaviors, 
-            I hope to help improve generative AI models mimicking human generative behaviors 
-            and human-centered tools aimed at supporting human-ai interactions related to:
+            <p>My approach combines a mixture of quantitative & qualitative methods to characterize these behaviors.
+            With these insights, I hope to help improve generative AI models mimicking human generative behaviors 
+            and human-centered tools aimed at supporting human-AI interactions related to:
             <i>text-to-image-generation, audience design, object identification, and semantic segmentation</i></p>
 
-            <p>Here's my latest <a href="assets/cv/hhuey_resume_edited.pdf" class="urls" target="_blank">resume</a></p>
-
-          <p><strong>Bio:</strong>
-            I grew up on Whidbey Island in WA State. As an introverted teenager on a rural island, I spent most of my time sketching and 
-            hiding away in ceramics studios. After 2 art apprenticeships and double majoring in Philosophy and 
-            History of Mathematics & Sciences from St. John's College, I became fascinated by how novel visual media 
+            <p>Here's my latest <a href="assets/cv/hhuey_resume_edited.pdf" class="external" target="_blank">resume</a>.</p>
+          </div>  
+          <div>
+          <p><b>Bio:</b>
+            I grew up on <a href="https://en.wikipedia.org/wiki/Whidbey_Island" class="external" target="_blank">Whidbey Island, WA</a>. As an introverted teenager on a rural island, I spent most of my time sketching and 
+            hiding away in ceramics studios. After two art apprenticeships and then double majoring in Philosophy and 
+            History of Mathematics & Sciences from <a href="https://www.sjc.edu/" class="external" target="_blank">St. John's College</a>, I became fascinated by how novel visual media 
             (e.g., Cartesian coordinate system, periodic table, Vitruvian man) across history helped catalyze 
             and communicate major scientific discoveries. 
             Despite this critical role of visual media in human innovation, relatively little is known about the cognitive processes
             that underlie how people communicate via images, by comparison to language. 
-            This question inspired and continues to guide my research throughout my graduate program.</p>
+            This question continues to inspire my research throughout my graduate program.</p>
+          </div>
         </div>
       </div>
+
       <!-- Research -->
       <div id="bio-research" class="line-transition"><a id="research">
-          <h1>research</h1>
+          <h1>research domains</h1>
         </a>
-        <div>
-          <p>Below are three lines of work exploring visual communication across different domains:</p>
-        </div>
-        <!-- https://www.w3docs.com/snippets/css/how-to-display-an-animated-text-over-an-image-on-hover-using-only-css3.html -->
-        <!-- <div class="example">
-          <img src="assets/studies/causaldraw.png" class="study-icons text" alt="tree" />
-          <div class="content">
-            <div class="text">How do we communicate causal knowledge through visual form?</div>
-          </div>
-        </div>
-        <div class="example">
-          <img id="causaldraw_kids" src="assets/studies/causaldraw_kids.png" class="study-icons text" alt="tree" />
-          <div class="content">
-            <div class="text">How do we learn to communicate abstract concepts across childhood?</div>
-          </div>
-        </div> -->
-
         <div class="grid-container">
           <div>
-            <!-- <img src="inferring.png" alt="photodraw++_kiddraw" class="center" id="fixed-width-logo"> -->
+            <!-- <img src="assets/figures/causaldraw.png" class="center research-figures"> -->
             <h4>
-              <center>What drives recognizability of different visual object concepts? </center>
+              <center>Drawings</center>
             </h4>
-            <p>From children's drawings of common objects to adults' abstractions of
-              categories and subcategories, I study how the semantic structure of our
-              visualizations change across childhood and flexibly depending on our visual context.
-              By analyzing large-scale datasets of 2K children's drawings to 12K adult drawings, my work aims
-              to comprehensively explore how people choose to represent different visual object concepts.
-              Our datasets will be publically released shortly!</p>
-          </div>
+            <p>Since the first cave art, drawings have been a window into how people 
+              organize their knowledge into symbolic representation. 
+              By collecting & analyzing large-scale drawing datasets by humans, AI models, and children, 
+              my work aims to investigates how people interpret the visual objects and scenes in their environments.
 
+              <div style="font-size: 18px !important; line-height: 22px;">
+                *In recent work accepted to NeurIPS, my collaborators and I crowdsourced & analyzed >90K drawings generated by both humans and generative sketch AI! 
+              </div>
+            </p>
+          </div>
           <div>
             <!-- <img src="social info.png" alt="causaldraw" class="center" id="fixed-width-logo"> -->
             <h4>
-              <center>How do explanatory visualizations convey higher-level knowledge?</center>
+              <center>Abstract Diagrams</center>
             </h4>
-            <p>Visual explanations are at the core of human innovation, collaboration, and communication.
-              I study how people encode their knowledge about physical mechanisms into sketches.
-              I then crowdsource semantic annotations through custom web browser experiments and use
-              computer vision techniques to analyze the drawn content and its spatial organization to determine how
-              people prioritize different kinds of visual information depending on their viewers' goals.</p>
+            <p>Visual explanations are at the core of human innovation & design.
+              How do people's goals to convey higher-level knowledge about physical
+              mechanism shift how they produce diagrams? 
+              This line of work investigates how people prioritize different kinds 
+              of semantic information and what behavioral impact their representational choices have on viewers.</p>
           </div>
           <div>
             <!-- <img src="teaching.png" alt="davinci" class="center" id="fixed-width-logo"> -->
             <h4>
-              <center>How do data visualization conventions guide interpretations?</center>
+              <center>Data Visualizations</center>
             </h4>
-            <p>Data visualizations are poweful tools to compress large data, reveal latent trends,
-              and communicate vital knowledge to a wide audience.
-              However, data visualizations are far from objective. For example,
-              how might a scientist vs. a journalist flexible generate such visualizations?
-              I study how people produce graphs in order to convey different aspects of statistical patterns.</p>
+            <p>With the rise of powerful computational & visualization technologies, 
+              data visualizations have become a critical tool to understand large data 
+              and reveal predictive statistical trends. However, even more simple graphs 
+              like barcharts, linecharts, or scatterplots require years of education to learn to make & interpret.
+              By analyzing how people answer different questions about graphs, my work aims to identify how different 
+              ways of visualizing data can lead to more effective graph design & comprehension.
+              </p>
           </div>
         </div><!-- /.grid container -->
-
-        <!-- <p> Beyond research, I also think a lot about how to teach computational literacy
-          and research design skills to undergraduate researchers, as well as
-          think about strategies to increase healthier mentorship relationships in academia.
-          Here are <a href="https://hollyhuey.github.io/teaching.html" class="urls">some are workshops and mentorship experiences</a>
-          that I've been proud of over the past years.
-        </p> -->
+        <div>
+          <p>While my dissertation research is focused on these three domains, 
+            I have also explored & published work in other domains, 
+            such as human visuospatial perception, social pragmatics, navigation, and symbolic reasoning.
+            See my below publications for more information.
+          </p>
+        </div>
       </div>
 
       <!-- Publications -->
       <div id="bio-publications"><a id="publications">
           <h1>publications</h1>
         </a></div>
-      <p style="text-align:left; font-size:95%; margin-left:0px; opacity: .5;">* = equal authorship</p>
+      <!-- <p style="text-align:left; font-size:95%; margin-left:0px; opacity: .5;">* = equal authorship</p> -->
+
+      <!-- <div style="margin-bottom: 25px;">
+        <bold-text style="font-size:125%;">journal articles</bold-text>
+      </div>
+      
+      <div class="grid-container-publications">
+          <div>
+            <img src="assets/figures/causaldraw.png" class="research-figures">
+          </div>
+          <div></div>
+          <div class="research-text">            
+          <b>Huey, H.,</b> Walker, C.M., & Fan, J.E. (2023).
+          Explanatory drawings prioritize functional properties at the expense of visual fidelity. <i>Cognition.</i>
+          <br>
+          <a href="assets/studies/causaldraw_cognition.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
+          <a href="assets/studies/davinci_cogsci2023.pdf" target="_blank" class="external">Poster</a>&nbsp;&nbsp;
+          <a href="https://www.sciencedirect.com/science/article/pii/S0010027723000483?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
+          </div>
+      </div>
+
+      <div class="grid-container-publications">
+        <div>
+          <img class="research-figures" src="assets/figures/paralleldev.png">
+        </div>
+        <div></div>
+        <div class="research-text">            
+          Long, B., Fan, J., <b>Huey, H.,</b> Chai, R., & Frank, M. C. (preprint).
+          Parallel developmental changes in children's production and recognition of line drawings of visual concepts.
+          <i>Cognition.</i>
+          <br>
+          <a href="assets/studies/Long et al. 2023 Preprint.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <div class="grid-container-publications">
+      <div>
+        <img class="research-figures" src="assets/figures/igeo_results.png">
+      </div>
+      <div></div>
+      <div class="research-text">            
+        <b>*Huey, H.,</b>*Jordan, M., & Dillon,. M.R. (2023).
+        Shortest path problems on different geometric surfaces: Reasoning about linearity through development. <i>Developmental Psychology.</i>
+        <br>
+        <a href="assets/studies/HueyJordan_etal_2023.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
+        <a href="https://psycnet.apa.org/record/2023-35044-001" target="_blank" class="external">Publisher's Page</a>
+      </div>
+  </div>
+
+  <div class="grid-container-publications">
+    <div>
+      <img class="research-figures" src="assets/figures/aboody_cog.png">
+    </div>
+    <div></div>
+    <div class="research-text">            
+      Aboody, R., <b>Huey, H.,</b> & Jara-Ettinger, J. (2022).
+      Preschoolers decide who is knowledgeable, who to inform, and who to trust via a causal understanding of how knowledge
+      relates to action. <i>Cognition.</i>
+      <a href="assets/studies/predict-observe.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
+      <a href="https://www.sciencedirect.com/science/article/pii/S0010027722002001?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
+    </div>
+</div>
+ -->
+
       <ul class="publications">
         <li class="text publication-text">
-          <bold-text style="font-size:125%;">journal articles</bold-text>
+          <div style="font-size:125%;">journal articles</div>
         </li>
 
         <li class="text publication-text">
           <b>Huey, H.,</b> Walker, C.M., & Fan, J.E. (2023).
           Explanatory drawings prioritize functional properties at the expense of visual fidelity. <i>Cognition.</i>
+          <br>
           <a href="assets/studies/causaldraw_cognition.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="assets/studies/davinci_cogsci2023.pdf" target="_blank" class="external">Poster</a>&nbsp;&nbsp;
           <a href="https://www.sciencedirect.com/science/article/pii/S0010027723000483?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
@@ -179,12 +244,14 @@
           Long, B., Fan, J., <b>Huey, H.,</b> Chai, R., & Frank, M. C. (preprint).
           Parallel developmental changes in children's production and recognition of line drawings of visual concepts.
           <!-- <i>Cognition.</i> -->
+          <br>
           <a href="assets/studies/Long et al. 2023 Preprint.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
         </li>
 
         <li class="text publication-text">
           <b>*Huey, H.,</b>*Jordan, M., & Dillon,. M.R. (2023).
           Shortest path problems on different geometric surfaces: Reasoning about linearity through development. <i>Developmental Psychology.</i>
+          <br>
           <a href="assets/studies/HueyJordan_etal_2023.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="https://psycnet.apa.org/record/2023-35044-001" target="_blank" class="external">Publisher's Page</a>
         </li>
@@ -193,6 +260,7 @@
           Aboody, R., <b>Huey, H.,</b> & Jara-Ettinger, J. (2022).
           Preschoolers decide who is knowledgeable, who to inform, and who to trust via a causal understanding of how knowledge
           relates to action. <i>Cognition.</i>
+          <br>
           <a href="assets/studies/predict-observe.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="https://www.sciencedirect.com/science/article/pii/S0010027722002001?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
         </li>
@@ -201,18 +269,20 @@
           Jara-Ettinger, J., Floyd, S., <b>Huey, H.,</b> Tenenbaum, J.B., & Schulz, L. (2019).
           Social pragmatics: Four and five-year-olds rely on commonsense psychology to
           resolve referential ambiguities. <i>Child Development.</i>
+          <br>
           <a href="assets/studies/Jara-Ettinger_et_al2019_Child_Development.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="https://srcd.onlinelibrary.wiley.com/doi/10.1111/cdev.13290" target="_blank" class="external">Publisher's Page</a>
         </li>
         <br>
         <li class="text publication-text">
-          <bold-text style="font-size:125%;">peer-reviewed conference proceedings & posters</bold-text>
+          <div style="font-size:125%;">peer-reviewed conference proceedings & posters</div>
         </li>
 
         <li class="text publication-text">
           *Mukherjee, K., <b>*Huey, H.,</b> *Lu, X., Vinker, Y., Aguina-Kang, R., and Fan, J.E. (2023).
-          SEVA: Leveraging sketches to evaluate alignment between human and machine visual abstraction
+          SEVA: Leveraging sketches to evaluate alignment between human and machine visual abstraction.
           <i>Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track, 2023</i>
+          <br>
           <a href="assets/studies/mukherjee_neurips_2023.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
         </li>
 
@@ -221,6 +291,7 @@
           How do communicative goals guide which data visualizations people think are effective?
           <i>Proceedings of the 45th Annual Conference of the Cognitive Science Society.</i>
           Sydney, Australia: Cognitive Science Society.
+          <br>
           <a href="assets/studies/hueyoey_cogsci_2023.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="assets/studies/davinci_cogsci2023.pdf" target="_blank" class="external">Poster</a>
         </li>
@@ -230,6 +301,7 @@
           Evaluating machine comprehension of sketch meaning at different levels of abstraction.
           <i>Proceedings of the 45th Annual Conference of the Cognitive Science Society.</i>
           Sydney, Australia: Cognitive Science Society.
+          <br>
           <a href="assets/studies/mukherjee_cogsci_2023.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="assets/studies/VAB_CogSci_2023_poster.pdf" target="_blank" class="external">Poster</a>
         </li>
@@ -239,6 +311,7 @@
           What is graph comprehension and how do you measure it?
           <i>Proceedings of the 45th Annual Conference of the Cognitive Science Society.</i>
           Sydney, Australia: Cognitive Science Society.
+          <br>
           <a href="assets/studies/GCB_cogsci2023_abstract.pdf" target="_blank" class="external">Abstract</a>&nbsp;&nbsp;
           <a href="assets/studies/gcb_portrait.pdf" target="_blank" class="external">Poster</a>
         </li>
@@ -248,6 +321,7 @@
           Developmental changes in the semantic part structure of drawn objects.
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
+          <br>
           <a href="assets/studies/hueylong_cogsci_2022.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="assets/studies/cogsci_kiddraw_annotations_2022_FINALPOSTER_6.pdf" target="_blank" class="external">Poster</a>
         </li>
@@ -257,6 +331,7 @@
           Decomposing objects into parts from vision and language.
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
+          <br>
           <a href="assets/studies/partnaming_cogsci2023_abstract.pdf" target="_blank" class="external">Abstract</a>&nbsp;&nbsp;
         </li>
 
@@ -265,6 +340,7 @@
           How do the semantic properties of visual explanations guide causal inference?
           <i>Proceedings of the 43rd Annual Conference of the Cognitive Science Society.</i>
           (Virtual Meeting) Vienna, Austria: Cognitive Science Society.
+          <br>
           <a href="assets/studies/semanticproperties_510.pdf" target="_blank" class="external">PDF</a>&nbsp;&nbsp;
           <a href="assets/studies/cogsci_poster_2021_final.pdf" target="_blank" class="external">Poster</a>&nbsp;&nbsp;
           <a href="assets/studies/cogsci_poster_run2.mp4" target="_blank" class="external">Video</a>
@@ -275,6 +351,7 @@
           not imply knowledge: Preschoolers believe that accurate predictions reveal
           prior knowledge, but accurate observations do not.
           <i>Proceedings of the 40th Annual Conference of the Cognitive Science Society.</i>
+          <br>
           <a href="assets/studies/Aboody_Huey_Jara-Ettinger_2018_CogSci.pdf" target="_blank" class="external">PDF</a>
         </li>
 
@@ -282,14 +359,15 @@
           Aboody, R., <b>Huey, H.,</b> & Jara-Ettinger, J. (2017).
           Success does not imply knowledge: Preschoolers believe that accurate predictions reveal prior knowledge,
           but accurate observations do not.
-          <i>Poster presented at the Cognitive Development Society’s Bi-Annual Meeting 2017.</i>
+          <i>Poster presented at the Cognitive Development Society's Bi-Annual Meeting 2017.</i>
+          <br>
           <a href="assets/studies/CDS_poster_2017.pdf" target="_blank" class="external">Poster</a>
         </li>
 
         <br>
 
         <li class="text publication-text">
-          <bold-text style="font-size:125%;">workshop presentations</bold-text>
+          <div style="font-size:125%;">workshop presentations</div>
         </li>
 
         <li class="text publication-text"> 
@@ -298,6 +376,7 @@
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
           <b>Co-organizer of workshop & co-designer of website.</b>
+          <br>
           <a href="https://images2symbols.github.io/" class="external">Website</a>&nbsp;&nbsp;
           <a href="assets/studies/images2symbols.pdf" target="_blank" class="external">PDF</a>
         </li>
@@ -310,7 +389,8 @@
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
           <b>Invited speaker.</b>
-          <a href="assets/studies/diverse_spatialcognition.pdf" target="_blank" class="external">PDF</a>
+          <br>
+          <a href="assets/studies/diverse_spatialcognition.pdf" target="_blank" class="external" role="button">PDF</a>
         </li>
       </ul>
     </div>
@@ -350,36 +430,4 @@
     <p style="opacity: .5;">Designed by Holly Huey. Photo credit: Petrina Chan (headshot) & Terra Huey (headshot art)</p>
   </div>
 </body>
-
-<script>
-  // write typing text
-  window.onload = function() {
-    // https://github.com/mattboldt/typed.js/
-    new Typed('#typing-text', {
-      strings: ["COMMUNICATE WITH EACH OTHER?", "LEARN ABOUT THE WORLD?", "IMPROVE OUR ENVIRONMENTS?"],
-      // strings: ["COMMUNICATE?", "LEARN?", "^500DRIVE CHANGE?"],
-      typeSpeed: 60,
-      backDelay: 1500,
-      fadeOut: false,
-      backSpeed: 30,
-      smartBackspace: true,
-      loop: true,
-      showCursor: false
-    });
-  };
-
-  // mouseover to switch headshots
-  $('#headshot').hover(function() {
-    $(this).attr('src', 'assets/photos/headshot-sketch2.png');
-  }, function() {
-    $(this).attr('src', 'assets/photos/headshot.png');
-  });
-
-  function menuOnClick() {
-    document.getElementById("menu-bar").classList.toggle("change");
-    document.getElementById("hamburger").classList.toggle("change");
-    document.getElementById("menu-bg").classList.toggle("change-bg");
-  }
-</script>
-
 </html>

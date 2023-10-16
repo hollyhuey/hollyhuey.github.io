@@ -1,0 +1,128 @@
+  /* fade in hero-text */
+  @-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translatey(-10px);
+      -moz-transform: translatey(-10px);
+      -o-transform: translatey(-10px);
+      transform: translatey(-10px);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translatey(0);
+      -moz-transform: translatey(0);
+      -o-transform: translatey(0);
+      transform: translatey(0);
+    }
+  }
+
+  @-moz-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translatey(-10px);
+      -moz-transform: translatey(-10px);
+      -o-transform: translatey(-10px);
+      transform: translatey(-10px);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translatey(0);
+      -moz-transform: translatey(0);
+      -o-transform: translatey(0);
+      transform: translatey(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translatey(-10px);
+      -moz-transform: translatey(-10px);
+      -o-transform: translatey(-10px);
+      transform: translatey(-10px);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translatey(0);
+      -moz-transform: translatey(0);
+      -o-transform: translatey(0);
+      transform: translatey(0);
+    }
+  }
+
+  .in-down {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+
+  /* scroll-down-arrow */
+  .btn-continue {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    margin-left: -30px;
+    padding: 12px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    text-indent: -9999em;
+    outline: none;
+    opacity: .25;
+    background-image: url(norm-site-icons/scroll-down-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-tap-highlight-color: transparent;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+    }
+
+    40% {
+      -webkit-transform: translateY(-30px);
+    }
+
+    60% {
+      -webkit-transform: translateY(-15px);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-30px);
+    }
+
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+  }
