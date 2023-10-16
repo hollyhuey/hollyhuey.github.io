@@ -13,7 +13,7 @@ p, h1, .text {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: left;
 }
 
@@ -58,7 +58,7 @@ headshot-span {
 }
 
 #hero-content {
-  margin-bottom: 15%;
+  margin-bottom: 50%;
   align-self: center;
 }
 
@@ -69,7 +69,8 @@ headshot-span {
 
 #hero-description,
 #hero-navigation-bar {
-  font-size: 1.7em;
+  font-size: 1.5em;
+  line-height: 1.25em;
 }
 
 .dot {
@@ -91,7 +92,7 @@ headshot-span {
 #landing_background {
   background-image: url(norm-site-icons/trans_landing.png);
   background-size: 87%;
-  background-position: 50% 50%;
+  background-position: 50% 35%;
   background-repeat: no-repeat;
 }
 
@@ -117,23 +118,43 @@ headshot-span {
     padding-left: 3em;
     padding-bottom: 0.5em;
     padding-top: 2em;
-    height: 25em;
+    height: 17em;
     float: right;
   }
 
-  .bio-text {
+  #wrapper {
     font-size: 1.25em;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
+    /* border: 2px solid red; */
+  }
+
+  .bio-text-desc {
+    font-size: .8em;
+    line-height: 1.25em;
+    margin-top: 2em;
+    /* border: 2px solid green; */
+  }
+
+  typy {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1em;
   }
 
   #typing-text {
     color: #09AD94;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
   }
 
+  #typing-wrapper {
+    height: 5em;
+    /* border: 2px solid blue; */
+  }
+
+/* RESEARCH */
   .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -141,9 +162,23 @@ headshot-span {
     justify-content: space-around;
   }
 
+  #text-footer {
+    font-size: 14px !important; 
+    line-height: 15px;
+    margin-top: 15px;
+  }
+
 /* PUBLICATIONS */
 .publication-text {
   font-size: 0.75em;
+}
+
+.indiv-pub-text {
+  font-size: 0.6em;
+}
+
+.sub-pubs {
+  font-size:115%;
 }
 
 .grid-container-publications {
@@ -267,7 +302,7 @@ input, button, select, optgroup, textarea {
 nav ul {
   padding: 0px;
   list-style: none;
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
   margin: 20px auto;
   width: 97%;

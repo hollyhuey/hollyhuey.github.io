@@ -2,7 +2,7 @@
 window.onload = function() {
   // https://github.com/mattboldt/typed.js/
   new Typed('#typing-text', {
-    strings: ["COMMUNICATE WITH EACH OTHER?", "LEARN ABOUT THE WORLD?", "IMPROVE OUR ENVIRONMENTS?"],
+    strings: ["COMMUNICATE WITH OTHERS?", "LEARN ABOUT THE WORLD?", "IMPROVE OUR ENVIRONMENTS?"],
     // strings: ["COMMUNICATE?", "LEARN?", "^500DRIVE CHANGE?"],
     typeSpeed: 60,
     backDelay: 1500,

@@ -126,6 +126,7 @@ headshot-span {
 
   .bio-text-desc {
     font-size: 1em;
+    margin-top: 2em;
     /* border: 2px solid green; */
   }
 
@@ -148,7 +149,7 @@ headshot-span {
   /* RESEARCH */
   .grid-container {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 100%;
     text-align: left;
     justify-content: space-around;
   }
