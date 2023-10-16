@@ -67,7 +67,7 @@ headshot-span {
   font-size: 1.7em;
 }
 
-.dot {
+.period-dot {
   font-size: 7em;
   color: #09AD94;
 }
@@ -163,6 +163,57 @@ headshot-span {
     margin-top: 20px;
   }
 
+  img {
+    vertical-align: middle;
+  }
+
+  .mySlides, .mySlides_2 {
+  text-align: center;
+  /* border: 2px blue solid; */
+  }
+
+  .research-text {
+    margin-top: 20px;
+    /* border: 2px solid red; */
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+    align-items: center;
+  }
+  
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot, .dot_2, .dot_3 {
+    cursor: pointer;
+    height: 0.5em;
+    width: 0.5em;
+    margin: 0 2px;
+    background-color: white;
+    border: 1.5px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+  }
+  
+  .active, .dot:hover, .dot_2:hover, .dot_3:hover {
+    background-color: #0E907C;
+    opacity: 75%;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: .5s;
+  }
+
 /* PUBLICATIONS */
 .publication-text {
   font-size: 0.75em;
@@ -195,9 +246,13 @@ headshot-span {
  }
 
  .research-figures {
-  width: 8em;
-  border: 0.125em solid #BABCBD;
+  width: 20em;
+  border-radius: 2%;
+  border: 0.1em solid #D3D5D7;
   padding: 0.5em;
+  margin-top: -1em;
+  /* margin-right: 1em; */
+  margin-bottom: 1em;
   background-color: white;
  }
  

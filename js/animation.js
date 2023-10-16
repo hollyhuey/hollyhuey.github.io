@@ -20,7 +20,7 @@ window.onload = function() {
     $(this).attr('src', 'assets/photos/headshot.png');
   });
 
-};
+}; // close window onload
 
 // function menuOnClick() {
 //   document.getElementById("menu-bar").classList.toggle("change");

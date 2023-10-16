@@ -31,7 +31,7 @@
       <div id="landing-page-content">
         <div id="hero-content" class="landing-text">
           <div>
-            <p><span id="hero-header" class="in-down">Holly Huey</span><span class="dot in-down">.</span>
+            <p><span id="hero-header" class="in-down">Holly Huey</span><span class="period-dot in-down">.</span>
             </p>
           </div>
           <div id="hero-description" class="in-down">
@@ -109,11 +109,25 @@
         </a>
         <div class="grid-container">
           <div>
-            <!-- <img src="assets/figures/causaldraw.png" class="center research-figures"> -->
-            <h4>
-              <center>Drawings</center>
-            </h4>
-            <div class="bio-text-desc">Since the first cave art, drawings have been a window into how people 
+            <h3>
+              <center>SKETCHES</center>
+            </h3>
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <img src="assets/figures/VAB_gallery.png" class="research-figures">
+              </div>
+              
+              <div class="mySlides fade">
+                <img src="assets/figures/causaldraw_mega_2.png" class="research-figures">
+              </div> 
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+              </div>
+              </div>
+            <!-- <img src="assets/figures/VAB_gallery.png" class="center research-figures"> -->
+            <div class="bio-text-desc research-text">Since the first cave art, drawings have been a window into how people 
               organize their knowledge into symbolic representation. 
               By collecting & analyzing large-scale drawing datasets by humans, AI models, and children, 
               my work aims to investigates how people interpret the visual objects and scenes in their environments.</div>
@@ -123,22 +137,50 @@
               </div>
           </div>
           <div>
-            <!-- <img src="social info.png" alt="causaldraw" class="center" id="fixed-width-logo"> -->
-            <h4>
-              <center>Abstract Diagrams</center>
-            </h4>
-            <div class="bio-text-desc">Visual explanations are at the core of human innovation & design.
+            <h3>
+              <center>ABSTRACT DIAGRAMS</center>
+            </h3>
+            <div class="slideshow-container">
+              <div class="mySlides_2 fade">
+                <img src="assets/figures/igeo.png" class="research-figures">
+              </div>
+              
+              <div class="mySlides_2 fade">
+                <img src="assets/figures/paralleldev.png" class="research-figures">
+              </div> 
+              
+              <div style="text-align:center">
+                <span class="dot_2" onclick="currentSlide_2(1)"></span> 
+                <span class="dot_2" onclick="currentSlide_2(2)"></span> 
+              </div>
+              </div>
+            <!-- <img src="assets/figures/causaldraw_mega_2.png" class="center research-figures"> -->
+            <div class="bio-text-desc research-text">Visual explanations are at the core of human innovation & design.
               How do people's goals to convey higher-level knowledge about physical
               mechanism shift how they produce diagrams? 
               This line of work investigates how people prioritize different kinds 
               of semantic information and what behavioral impact their representational choices have on viewers.</div>
           </div>
           <div>
+            <h3>
+              <center>DATA VISUALIZATIONS</center>
+            </h3>
+            <div class="slideshow-container">
+              <div class="mySlides_3 fade">
+                <img src="assets/figures/aboody_cog.png" class="research-figures">
+              </div>
+              
+              <div class="mySlides_3 fade">
+                <img src="assets/figures/diagrams.png" class="research-figures">
+              </div> 
+              
+              <div style="text-align:center">
+                <span class="dot_3" onclick="currentSlide_3(1)"></span> 
+                <span class="dot_3" onclick="currentSlide_3(2)"></span> 
+              </div>
+              </div>
             <!-- <img src="teaching.png" alt="davinci" class="center" id="fixed-width-logo"> -->
-            <h4>
-              <center>Data Visualizations</center>
-            </h4>
-            <div class="bio-text-desc">In our modern era, data visualizations have become a critical tool to understand large-scale information 
+            <div class="bio-text-desc research-text">In our modern era, data visualizations have become a critical tool to understand large-scale information 
               & reveal predictive statistical trends. However, even more simple graphs 
               (barcharts, linecharts, scatterplots) require years of education to understand & make them.
               By analyzing how people answer different questions about graphs, my work aims to identify different 
@@ -399,33 +441,105 @@
     <button type="button" class="btn social-button">
       <span class="mailto-wrapper">
         <a href="mailto:hhuey@ucsd.edu" class="mailto-link">
-          <img src="assets/social-icons/email.svg" class="social-icons">
+          <img src="assets/social-icons/email-outline.svg" class="social-icons">
         </a>
       </span>
     </button>
     <button type="button" class="btn social-button">
       <a href="https://www.linkedin.com/in/holly-huey/">
-        <img src="assets/social-icons/linkedin.svg" class="social-icons">
+        <img src="assets/social-icons/linkedin-outline.svg" class="social-icons">
       </a>
     </button>
     <button type="button" class="btn social-button">
       <a href="https://github.com/hollyhuey">
-        <img src="assets/social-icons/github.svg" class="social-icons">
+        <img src="assets/social-icons/github-outline.svg" class="social-icons">
       </a>
     </button>
     <button type="button" class="btn social-button">
       <a href="https://twitter.com/hollyahuey">
-        <img src="assets/social-icons/twitter.svg" class="social-icons">
+        <img src="assets/social-icons/twitter-outline.png" class="social-icons">
       </a>
     </button>
     <button type="button" class="btn social-button">
       <a href="https://scholar.google.com/citations?user=FSRbchUAAAAJ&hl=en">
-        <img src="assets/social-icons/google_scholar.png" class="social-icons">
+        <img src="assets/social-icons/google-scholar.svg" class="social-icons">
       </a>
     </button>
   </div>
   <div id="design-credit">
     <p style="opacity: .5;">Designed by Holly Huey. Photo credit: Petrina Chan (headshot) & Terra Huey (headshot art)</p>
   </div>
+
+  <!-- note: for some reason, there's a scoping error if this is moved to animation.js -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+    let slideIndex_2 = 1;
+    showSlides_2(slideIndex_2);
+    
+    function currentSlide_2(n) {
+      showSlides_2(slideIndex_2 = n);
+    }
+    
+    function showSlides_2(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides_2");
+      let dots = document.getElementsByClassName("dot_2");
+      if (n > slides.length) {slideIndex_2 = 1}    
+      if (n < 1) {slideIndex_2 = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex_2-1].style.display = "block";  
+      dots[slideIndex_2-1].className += " active";
+    }
+
+    let slideIndex_3 = 1;
+    showSlides_3(slideIndex_3);
+    
+    function currentSlide_3(n) {
+      showSlides_3(slideIndex_3 = n);
+    }
+    
+    function showSlides_3(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides_3");
+      let dots = document.getElementsByClassName("dot_3");
+      if (n > slides.length) {slideIndex_3 = 1}    
+      if (n < 1) {slideIndex_3 = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex_3-1].style.display = "block";  
+      dots[slideIndex_3-1].className += " active";
+    }
+    </script>
 </body>
 </html>
