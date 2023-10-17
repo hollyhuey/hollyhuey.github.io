@@ -17,6 +17,10 @@ h1 {
   text-align: left;
 }
 
+h3 {
+  color: #999999;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -249,7 +253,7 @@ headshot-span {
   width: 20em;
   border-radius: 2%;
   border: 0.1em solid #D3D5D7;
-  padding: 0.5em;
+  padding: 0.25em;
   margin-top: -1em;
   /* margin-right: 1em; */
   margin-bottom: 1em;
