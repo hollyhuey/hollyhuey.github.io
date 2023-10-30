@@ -67,10 +67,23 @@ headshot-span {
   font-size: 1.7em;
 }
 
-.dot {
-  font-size: 7em;
-  color: #09AD94;
-}
+  /* The dots/bullets/indicators */
+  .dot_4, .dot_2, .dot_3 {
+    cursor: pointer;
+    height: 0.5em;
+    width: 0.5em;
+    margin: 0 2px;
+    background-color: white;
+    border: 1.5px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+  }
+  
+  .active, .dot_4:hover, .dot_2:hover, .dot_3:hover {
+    background-color: #0E907C;
+    opacity: 75%;
+  }
 
 .landing-text {
   line-height: 1.25em;
@@ -142,7 +155,8 @@ headshot-span {
   }
 
   #typing-wrapper {
-    height: 5em;
+    /* height: 5em; */
+    display: none;
     /* border: 2px solid blue; */
   }
 
