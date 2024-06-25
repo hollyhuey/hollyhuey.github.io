@@ -157,7 +157,7 @@ headshot-span {
     justify-content: space-around;
   }
 
-  #text-footer {
+.text-footer {
     font-size: 16px !important; 
     line-height: 22px;
     margin-top: 10px;
