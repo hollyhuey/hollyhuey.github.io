@@ -14,11 +14,11 @@ window.onload = function() {
   });
 
   // mouseover to switch headshots
-  $('#headshot').hover(function() {
-    $(this).attr('src', 'assets/photos/headshot-sketch2.png');
-  }, function() {
-    $(this).attr('src', 'assets/photos/headshot.png');
-  });
+  // $('#headshot').hover(function() {
+  //   $(this).attr('src', 'assets/photos/headshot-sketch2.png');
+  // }, function() {
+  //   $(this).attr('src', 'assets/photos/headshot.png');
+  // });
 
 }; // close window onload
 
