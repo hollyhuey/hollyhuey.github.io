@@ -231,6 +231,13 @@ headshot-span {
   font-size:125%;
 }
 
+.sub-research {
+    font-size: 125%;
+    font-weight: 600;
+    text-align: left;
+    color: #808080;
+}
+
 .grid-container-publications {
   display: grid;
   grid-template-columns: 15% 5% 80%;
