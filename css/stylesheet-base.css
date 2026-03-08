@@ -181,7 +181,8 @@ headshot-span {
  }
 
  .research-images {
-  width: 50%
+  width: 50%;
+  border: 0.125em solid #BABCBD;
  }
 
  ul.publications {
