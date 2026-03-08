@@ -268,9 +268,8 @@ headshot-span {
  }
 
 .research-images {
-  width: 90%;
-  border-radius: 5%;
-  /* border: 0.125em solid #BABCBD; */
+  width: 85%;
+  border-radius: 10%;
  }
  
  .research-text {
