@@ -180,6 +180,10 @@ headshot-span {
   background-color: white;
  }
 
+ .research-images {
+  width: 80%
+ }
+
  ul.publications {
   margin: 10px 0;
   font-size: 1.4em;
