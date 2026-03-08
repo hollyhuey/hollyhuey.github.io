@@ -266,6 +266,11 @@ headshot-span {
   margin-bottom: 1em;
   background-color: white;
  }
+
+.research-images {
+  width: 50%;
+  border: 0.125em solid #BABCBD;
+ }
  
  .research-text {
   margin-left: 0.5em; display: inline-block
