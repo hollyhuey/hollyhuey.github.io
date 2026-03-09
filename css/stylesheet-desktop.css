@@ -268,8 +268,9 @@ headshot-span {
  }
 
 .research-images {
-  width: 85%;
-  padding: 10%;
+  width: 90%;
+  padding-right: 5%;
+  padding-left: 5%;
  }
  
  .research-text {
