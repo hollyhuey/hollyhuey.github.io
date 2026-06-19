@@ -7,25 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content>
   <meta name="author" content>
-  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="assets/norm-site-icons/favicon.png">
   <title>Holly Huey</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <!-- /* Large devices: desktops, 992px, and up */ -->
-  <link rel="stylesheet" type="text/css" href="css/stylesheet-desktop.css" media="only screen and (max-width: 5120px)">
-  <link rel="stylesheet" type="text/css" href="css/stylesheet-desktop.css" media="only screen and (max-width: 1920px)">
-  <link rel="stylesheet" type="text/css" href="css/stylesheet-desktop-medium.css" media="only screen and (max-width: 1000px)">
-  <!-- /* tablet */ -->
-  <link rel="stylesheet" type="text/css" href="css/stylesheet-tablet.css" media="only screen and (max-width: 768px)">
-  <!-- /* mobile */ -->
-  <link rel="stylesheet" type="text/css" href="css/stylesheet-mobile.css" media="only screen and (max-width: 576px)">
+  <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/stylesheet-animated-hero.css">
-  <link rel="shortcut icon" type="image/png" href="assets/norm-site-icons/favicon.png"> 
   <script type="text/javascript" src="js/animation.js"></script>
 </head>
 
 <body>
+
+  <!-- Scroll hint: gradient + chevron, hidden after scrolling past hero -->
+  <div class="hero-gradient"></div>
+  <div class="scroll-hint">
+    <div class="scroll-chevron"></div>
+  </div>
+
+  <!-- Sticky nav (hidden until user scrolls past hero) -->
+  <header id="sticky-nav" aria-hidden="true">
+    <span id="sticky-name">Holly Huey<span class="sticky-dot">.</span></span>
+    <nav>
+      <ul>
+        <li><a href="#about" class="nav text">about</a></li>
+        <li><a href="#research" class="nav text">research</a></li>
+        <li><a href="#publications" class="nav text">publications</a></li>
+        <li><a href="assets/cv/hhuey_resume_100925.pdf" class="nav text" target="_blank">resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- Landing Page -->
   <div id="background">
     <div id="landing_background">
@@ -42,409 +54,367 @@
           <div id="hero-navigation-bar" class="text in-down">
             <nav>
               <ul>
-                <li><a href="https://hollyhuey.github.io/#about" class="nav text">about</a></li>
-                <li><a href="https://hollyhuey.github.io/#research" class="nav text">research</a></li>
-                <li><a href="https://hollyhuey.github.io/#publications" class="nav text">publications</a></li>
+                <li><a href="#about" class="nav text">about</a></li>
+                <li><a href="#research" class="nav text">research</a></li>
+                <li><a href="#publications" class="nav text">publications</a></li>
                 <li><a href="assets/cv/hhuey_resume_100925.pdf" class="nav text" target="_blank">resume</a></li>
               </ul>
             </nav>
           </div>
         </div>
-        <a href="https://hollyhuey.github.io/#about">
-          <img src="assets/norm-site-icons/scroll-down-arrow.png" class="btn-continue animated bounce">
-        </a>
+
       </div>
     </div>
 
     <!-- About -->
     <div id="wrapper" class="text">
-      <div id="headshot-content">
+      <div id="headshot-content" class="fade-section">
         <headshot-span>
           <img id="headshot" src="assets/photos/headshot_circle.png">
         </headshot-span>
       </div>
-      <div class="line-transition">
+      <div class="line-transition fade-section">
         <div id="bio-header"><a id="about">
-            <!-- https://stackoverflow.com/questions/15481911/linking-to-a-specific-part-of-a-web-page -->
             <div id="typing-wrapper"><typy>How do we use images & videos to <span id="typing-text"></span></typy></div>
           </a></div>
         <div class="bio-text-desc">
-        <div style="margin-bottom: 2em">
-          <p>At <a href="https://www.adobe.com/home" target="_blank" class="external">Adobe</a>, 
-            I'm an Applied Scientist working to improve GenAI image & video systems.
-            I earned my PhD in Experimental Psychology from UC San Diego, under Dr. Judith Fan @ 
-            <a href="https://cogtoolslab.github.io/" target="_blank" class="external">The Cognitive Tools Lab</a>.</p>
+          <div style="margin-bottom: 2em">
+            <p>At <a href="https://www.adobe.com/home" target="_blank" class="external">Adobe</a>,
+              I'm an Applied Scientist working to improve GenAI image & video systems.
+              I earned my PhD in Experimental Psychology from UC San Diego, under Dr. Judith Fan @
+              <a href="https://cogtoolslab.github.io/" target="_blank" class="external">The Cognitive Tools Lab</a>.</p>
 
-          <p>I lead the Scientific Evaluation Team's efforts in evaluating state-of-the-art imaging and image editing technologies like <a href="https://firefly.adobe.com/" target="_blank" class="external">Adobe Firefly</a>.
-            My research statistically measures improvements & regressions in model behavior related to: 
-            <i>text-to-visual & visual-to-visual systems, semantic editing, object recognition,</i> and <i>user intentions</i></p>
-            
-          <p>I do this by developing large-scale benchmarks (e.g., 1K-50K assets each with 3-5 annotations), 
-            which enables me to identify market trends in artist and GenAI behavior. 
-            These insights are used to support product managers, data analytics, and model & engineering teams on how
-            to develop the next generation of creative tools. 
-            I also work with a globally and culturally diverse team of professional photographers & editors, graphic designers, 
-            and video creators/editors to better understand user needs and human-AI collaboration.</p> 
+            <p>I lead the Scientific Evaluation Team in evaluating SOTA imaging & editing GenAI technologies like <a href="https://firefly.adobe.com/" target="_blank" class="external">Adobe Firefly</a>.
+              My research statistically measures improvements & regressions in model behavior related to:
+              <i>text-to-visual & visual-to-visual systems, semantic editing, object recognition,</i> and <i>user intentions</i></p>
 
-            <p>Collaborating with AI Ethics teams is deeply integrated into my work to ensure that models do not create or enable the creation of harmful content.</p>
+            <p>I do this by developing large-scale benchmarks (e.g., 1K-50K assets each with 3-5 annotations) 
+              and specialized benchmarks (e.g., 100 validation sets each with 10 annotations),
+              which enables me to identify market trends in artist and model behavior.
+              These insights are used to support product managers, data analytics, and model & engineering teams on how
+              to develop the next generation of creative tools.
+              I also work with a globally and culturally diverse team of professional photographers & editors, graphic designers,
+              and video creators/editors to better understand user needs and human-AI collaboration.</p>
 
-            <p>My dissertation research evaluated how user intentions shift visual production behavior and downstream user interpretations.
-            I tested this by generating & analyzing large-scale datasets of drawings, diagrams, and data visualizations.
-            In other words, I studied how people make pictures. Now I study how GenAI models make pictures.
-          </div>  
-          <div>
-          <p class="text-footer"><b>Bio:</b>
-            I grew up on <a href="https://en.wikipedia.org/wiki/Whidbey_Island" class="external" target="_blank">Whidbey Island, WA</a>. 
-            As an introverted teen on a rural island, I spent most of my time sketching and hiding away in art studios. 
-            After two fine arts apprenticeships and double majoring in Philosophy and History of Mathematics & Sciences from 
-            <a href="https://www.sjc.edu/" class="external" target="_blank">St. John's College</a>, 
-            I was fascinated by how novel visualizations catalyzed and served to communicate most major scientific discoveries 
-            (e.g., Cartesian coordinate system, periodic table, Vitruvian man). 
-            Despite this critical role of visual media in human innovation, relatively little is known about how people communicate 
-            in visual form. This question continues to inspire my research.</p>
-          </div>
-          <!-- <div>
-          <p class="text-footer"><b>Mentorship:</b>
-          I love mentoring. It's one of the concrete ways that my roles both in academia and industry have felt the most fulfulling. 
-          Unfortunately, I don't have the bandwidth to mentor everyone to the capacity that I would like. So I started a substack of 
-          advice bites, specifically related to transitioning from academia to industry. If we haven't met before, please take a read!
-          If you're one of my former mentees or mentors, I would be thrilled to hear your thoughts & feedback!</p>
-          </div> -->
-        </div> 
+              <p>Collaborating with AI Ethics teams is deeply integrated into my work to ensure 
+                that models do not create or enable the creation of harmful content.</p>
+
+              <p>My dissertation research evaluated how user intentions shift visual production behavior and downstream user interpretations.
+              I tested this by generating & analyzing large-scale datasets of drawings, diagrams, and data visualizations.
+              In other words, I studied how people make pictures. Now I study how GenAI models make pictures.
+            </div>
+            <div>
+            <p class="text-footer"><b>Bio:</b>
+              I grew up on <a href="https://en.wikipedia.org/wiki/Whidbey_Island" class="external" target="_blank">Whidbey Island, WA</a>.
+              As an introverted teen on a rural island, I spent most of my time sketching and hiding away in art studios.
+              After two fine arts apprenticeships and double majoring in Philosophy and History of Mathematics & Sciences from
+              <a href="https://www.sjc.edu/" class="external" target="_blank">St. John's College</a>,
+              I was fascinated by how novel visualizations catalyzed and served to communicate most major scientific discoveries
+              (e.g., Cartesian coordinate system, periodic table, Vitruvian man).
+              Despite this critical role of visual media in human innovation, relatively little is known about how people communicate
+              in visual form. This question continues to inspire my research.</p>
+            </div>
+        </div>
       </div>
 
       <!-- Research -->
-      <div id="bio-research" class="line-transition"><a id="research">
+      <div id="bio-research" class="line-transition fade-section"><a id="research">
           <h1>research highlights</h1>
         </a>
-        <div class="sub-research">image generation & editing</div>
-        <p>My current research evaluates <i>text-to-image, image-to-image, image-to-video,</i>
-          and <i>image editing</i> via instructional prompting, masking, layer segmentation, and more. 
-          By measuring state-of-the-art model behavior and gathering insights from professional artists, 
-          my work helps to identify where the market is today as well as helps product managers define the market of tomorrow. 
-          In my day-to-day, I work with modeling and engineering teams to design custom experiments to collect large-scale datasets comparing 
-          different models and analyzing the technical quality and production readiness of outputs. 
-        </p>
-        <div>
-          <img src="assets/figures/genai_gallery.png"  style="width: 90%; padding-right: 5%; padding-left: 2%">
-        </div> 
-            <p class="text-footer">
-              Images generated with Adobe Firefly, including internal Image 5 model and integrated third-party models. 
-            </p>
-        <div class="sub-research" style="margin-top: 2em">cross-cultural image models</div>
-        <p>For developing culturally-specific GenAI models, I create and closely work 
-          with teams of artists with extensive lived experience from specific cultures and countries.
-          This humans-in-the-loop collaboration ensures that our models do not contribute to
-          erasure or inappropriate Westernization of non-Western cultures. 
-        </p>
+        <div class="sub-research fade-section">image generation & editing</div>
+        <div class="fade-section">
+          <p>My current research evaluates <i>text-to-image, image-to-image, image-to-video,</i>
+            and <i>image editing</i> via instructional prompting, masking, layer segmentation, and more.
+            By measuring state-of-the-art model behavior and gathering insights from professional artists,
+            my work helps to identify where the market is today as well as helps product managers define the market of tomorrow.
+            In my day-to-day, I work with modeling and engineering teams to design custom experiments to collect large-scale datasets comparing
+            different models and analyzing the technical quality and production readiness of outputs.
+          </p>
+          <img src="assets/figures/genai_gallery.png" class="research-img">
+          <p class="text-footer">
+            Images generated with Adobe Firefly, including internal Image 5 model and integrated third-party models.
+          </p>
+        </div>
 
-        <div class="sub-research" style="margin-top: 2em">video editing</div>
-        <p>Occasionally, I also conduct qualitative user research. 
-          At Adobe Research, I interviewed filmakers, video editors, and musicians to develop GenAI video 
-          editing parameters based on users' creative workflows. 
-          These insights helped frame large-scale annotation experiments that eventually fine-tuned different model parameters.
-          For example, our <a href="assets/studies/video_broll_cc2024.pdf" target="_blank" class="external">Creativity & Cognition 2024 paper</a>
-          evaluated how people (N >800) and LLM models select B-Roll to enrich videos 
-          depending on their goals to make entertaining or informative content.</p>
-        <div>
-          <img src="assets/figures/video_broll_gallery.png" style="width: 90%; padding-right: 5%; padding-left: 2%">  
-        </div> 
-            <p class="text-footer">
-            Huey, H., Leake, M., Aneja, D., Fisher, M., and Fan, J.E. (2024). 
+        <div class="sub-research fade-section" style="margin-top: 2em">cross-cultural image models</div>
+        <div class="fade-section">
+          <p>For developing culturally-specific GenAI models, I create and closely work
+            with teams of artists with extensive lived experience from specific cultures and countries.
+            This humans-in-the-loop collaboration ensures that our models do not contribute to
+            erasure or inappropriate Westernization of non-Western cultures.
+          </p>
+        </div>
+
+        <div class="sub-research fade-section" style="margin-top: 2em">video editing</div>
+        <div class="fade-section">
+          <p>Occasionally, I also conduct qualitative user research.
+            At Adobe Research, I interviewed filmakers, video editors, and musicians to develop GenAI video
+            editing parameters based on users' creative workflows.
+            These insights helped frame large-scale annotation experiments that eventually fine-tuned different model parameters.
+            For example, our <a href="assets/studies/video_broll_cc2024.pdf" target="_blank" class="external">Creativity & Cognition 2024 paper</a>
+            evaluated how people (N >800) and LLM models select B-Roll to enrich videos
+            depending on their goals to make entertaining or informative content.</p>
+          <img src="assets/figures/video_broll_gallery.png" class="research-img">
+          <p class="text-footer">
+            Huey, H., Leake, M., Aneja, D., Fisher, M., and Fan, J.E. (2024).
             How do video content creation goals impact which concepts people prioritize
              for generating B-roll imagery? Creativity and Cognition. Chicago, Illinois: Association for Computing Machinery
-            </p>
-
-        <div class="sub-research" style="margin-top: 2em">sketching</div>
-        <p>During my PhD, I specialized in large-scale crowdsourcing methods for collecting and analyzing sketches.
-        Datasets like these can be used for a wide array of research domains such as computer vision, attention, memory,
-        semantic segmentation of objects, and information prioritization based on user intentions. 
-        See my Publications below to access those datasets, such as our 
-        <a href="https://www.nature.com/articles/s41467-023-44529-9" target="_blank" class="external">Nature Communications 2024 paper</a>
-        on evaluating concept development in children through their drawings. 
-      </p>
-              <div>
-          <img src="assets/figures/nature_dev.png"  style="width: 90%; padding-right: 5%; padding-left: 2%">
-        </div> 
-            <p class="text-footer">
-              Long, B., Fan, J.E., Huey, H., Chai, R., & Frank, M. C. (2024). 
-              Parallel developmental changes in children's production and recognition of line drawings of visual concepts.
-              Nature Communications.
-            </p>
-        <div>
-          <img src="assets/figures/human_clipasso.png" style="width: 90%; padding-right: 5%; padding-left: 2%">  
-        </div> 
-            <p class="text-footer">
-              *Mukherjee, K., *Huey, H., *Lu, X., Vinker, Y., Aguina-Kang, R., and Fan, J.E. (2023). 
-              SEVA: Leveraging sketches to evaluate alignment between human and machine visual abstraction. 
-              Advances in Neural Information Processing Systems, Datasets and Benchmarks Track. 
-              New Orleans, Lousiana: NeurIPS
-            </p>
-      </div>
-        <!-- <div class="grid-container">
-          <div>
-            <h3>
-              <center>VISUALIZATIONS</center>
-            </h3>
-            <div>
-              <img src="assets/figures/vab_hero.png" class="research-figures">
-            </div> 
-            <div class="bio-text-desc research-text">
-              My dissertation research evaluated human visual content creation in the form of drawings, diagrams, and data visualizations
-              to investigate how people interpret objects and scenes.
-
-              <p class="text-footer">Our <a href="assets/studies/mukherjee_neurips_2023.pdf" target="_blank" class="external">NeurIPS 2023 paper</a>
-              collected >90K drawings across 128 object categories and compared 17 vision models' 
-              recognition of sketched objects by comparison to human viewers.</p>
-            </div>
-          </div>
-          <div>
-            <h3>
-              <center>IMAGES</center>
-            </h3>
-            <div>
-              <img src="assets/figures/model_reasoning_hero2.png" class="research-figures">
-            </div> 
-            <div class="bio-text-desc research-text">
-              To systematically evaluate text-to-image model errors, much of my work involves developing behavioral tasks to 
-              crowdsource human annotators and generate quality scores for large-scale image datasets.
-            </div>
-          </div>
-          <div>
-            <h3>
-              <center>VIDEO</center>
-            </h3>
-            <div>
-              <img src="assets/figures/video_broll_hero.png" class="research-figures">
-            </div> 
-            <div class="bio-text-desc research-text">
-              At Adobe Research, I interviewed video editors and directors to develop model parameters based on user needs and 
-              translated those insights into online experiments for quantitatively testing video editing models. 
-
-              <p class="text-footer">Our <a href="https://camps.aptaracorp.com/ACM_PMS/PMS/ACM/CC24/53/e0c1f3bf-0e3f-11ef-8182-16bb50361d1f/OUT/cc24-53.html" target="_blank" class="external">Creativity & Cognition 2024 paper</a> 
-              evaluated how people (N >800) and LLM models prioritize different visual concepts to illustrate as B-roll images 
-              depending on their goals to make entertaining or informative videos.</p>
-            </div>
-          </div>
+          </p>
         </div>
-        <div> -->
-          <!-- <div class="bio-text-desc extra-research">I have also published research in other domains: 
-            language, social pragmatics (theory of mind), navigation, causal perception, symbolic reasoning, and developmental psychology.
-            See my publications below or my <a href="https://scholar.google.com/citations?user=FSRbchUAAAAJ&hl=en" class="external" target="_blank">Google Scholar</a> for papers in these areas.
-          </div>
-        </div> -->
 
+        <div class="sub-research fade-section" style="margin-top: 2em">sketching</div>
+        <div class="fade-section">
+          <p>During my PhD, I specialized in large-scale crowdsourcing methods for collecting and analyzing sketches.
+          Datasets like these can be used for a wide array of research domains such as computer vision, attention, memory,
+          semantic segmentation of objects, and information prioritization based on user intentions.
+          See my Publications below to access those datasets, such as our
+          <a href="https://www.nature.com/articles/s41467-023-44529-9" target="_blank" class="external">Nature Communications 2024 paper</a>
+          on evaluating concept development in children through their drawings.
+          </p>
+          <img src="assets/figures/nature_dev.png" class="research-img">
+          <p class="text-footer">
+            Long, B., Fan, J.E., Huey, H., Chai, R., & Frank, M. C. (2024).
+            Parallel developmental changes in children's production and recognition of line drawings of visual concepts.
+            Nature Communications.
+          </p>
+          <img src="assets/figures/human_clipasso.png" class="research-img">
+          <p class="text-footer">
+            *Mukherjee, K., *Huey, H., *Lu, X., Vinker, Y., Aguina-Kang, R., and Fan, J.E. (2023).
+            SEVA: Leveraging sketches to evaluate alignment between human and machine visual abstraction.
+            Advances in Neural Information Processing Systems, Datasets and Benchmarks Track.
+            New Orleans, Lousiana: NeurIPS
+          </p>
+        </div>
+      </div>
 
       <!-- Publications -->
-      <div id="bio-publications"><a id="publications">
+      <div id="bio-publications" class="fade-section"><a id="publications">
           <h1>publications</h1>
         </a></div>
 
-      <ul class="publications">
+      <ul class="publications fade-section">
         <li class="text publication-text">
-          <div class="sub-pubs">journal articles</div>
+          <div class="sub-pubs fade-section">journal articles</div>
         </li>
 
-        <li class="text indiv-pub-text">
-          *Yang, J., <b>*Huey, H.,</b> Lu, X., and Fan, J.E. (<i>submitted</i>). 
+        <li class="text indiv-pub-text fade-section">
+          *Yang, J., <b>*Huey, H.,</b> Lu, X., and Fan, J.E. (<i>submitted</i>).
           Visual communication of object concepts at different levels of abstraction.
         </li>
 
-        <li class="text indiv-pub-text">
-          Mukherjee, K., <b>Huey, H.,</b> Stoinski, L.M., Hebart, M.N., Fan, J.E., and Bainbridge, W.A. (2025). 
-          Drawings of THINGS: A large-scale drawing dataset of 1,854 object concepts. 
+        <li class="text indiv-pub-text fade-section">
+          Mukherjee, K., <b>Huey, H.,</b> Stoinski, L.M., Hebart, M.N., Fan, J.E., and Bainbridge, W.A. (2025).
+          Drawings of THINGS: A large-scale drawing dataset of 1,854 object concepts.
           <i>Behavior Research Methods.</i>
-          <br>
-          <a href="assets/studies/mukherjee_thingsdraw_2026.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="https://link.springer.com/article/10.3758/s13428-025-02887-w" target="_blank" class="external">Publisher's Page</a>
+          <div class="pub-links">
+            <a href="assets/studies/mukherjee_thingsdraw_2026.pdf" target="_blank" class="external">Paper</a>
+            <a href="https://link.springer.com/article/10.3758/s13428-025-02887-w" target="_blank" class="external">Publisher's Page</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
-          Brockbank, E., Verma, A., Lloyd, H., <b>Huey, H.,</b> Padilla, L., and Fan, J.E. (2025). 
-          Evaluating convergence between two data visualization literacy assessments. 
+        <li class="text indiv-pub-text fade-section">
+          Brockbank, E., Verma, A., Lloyd, H., <b>Huey, H.,</b> Padilla, L., and Fan, J.E. (2025).
+          Evaluating convergence between two data visualization literacy assessments.
           <i>Cognitive Research: Principles and Implications.</i>
-          <br>
-          <a href="assets/studies/brockbank_crpi_2025.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="https://cognitiveresearchjournal.springeropen.com/articles/10.1186/s41235-025-00622-9" target="_blank" class="external">Publisher's Page</a>
+          <div class="pub-links">
+            <a href="assets/studies/brockbank_crpi_2025.pdf" target="_blank" class="external">Paper</a>
+            <a href="https://cognitiveresearchjournal.springeropen.com/articles/10.1186/s41235-025-00622-9" target="_blank" class="external">Publisher's Page</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           <b>Huey, H.,</b> Leake, M., Aneja, D., Fisher, M., and Fan, J.E. (2024).
           How do video content creation goals impact which concepts people prioritize for generating B-roll imagery?
           <i>Creativity and Cognition</i>.
           Chicago, Illinois: Association for Computing Machinery
-          <br>
-          <a href="assets/studies/video_broll_cc2024.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="assets/studies/huey_broll_cc_2024.pdf" target="_blank" class="external">Poster</a>&nbsp;&nbsp;
+          <div class="pub-links">
+            <a href="assets/studies/video_broll_cc2024.pdf" target="_blank" class="external">Paper</a>
+            <a href="assets/studies/huey_broll_cc_2024.pdf" target="_blank" class="external">Poster</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Long, B., Fan, J.E., <b>Huey, H.,</b> Chai, R., & Frank, M. C. (2024).
           Parallel developmental changes in children's production and recognition of line drawings of visual concepts.
           <i>Nature Communications.</i>
-          <br>
-          <a href="assets/studies/long_etal_2024.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="https://www.nature.com/articles/s41467-023-44529-9" target="_blank" class="external">Publisher's Page</a>
+          <div class="pub-links">
+            <a href="assets/studies/long_etal_2024.pdf" target="_blank" class="external">Paper</a>
+            <a href="https://www.nature.com/articles/s41467-023-44529-9" target="_blank" class="external">Publisher's Page</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           <b>Huey, H.,</b> Lu, X., Walker, C.M., & Fan, J.E. (2023).
           Explanatory drawings prioritize functional properties at the expense of visual fidelity. <i>Cognition.</i>
-          <br>
-          <a href="assets/studies/causaldraw_cognition.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="assets/studies/davinci_cogsci2023.pdf" target="_blank" class="external">Poster</a>&nbsp;&nbsp;
-          <a href="https://www.sciencedirect.com/science/article/pii/S0010027723000483?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
+          <div class="pub-links">
+            <a href="assets/studies/causaldraw_cognition.pdf" target="_blank" class="external">Paper</a>
+            <a href="assets/studies/davinci_cogsci2023.pdf" target="_blank" class="external">Poster</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0010027723000483?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           <b>*Huey, H.,</b> *Jordan, M., & Dillon,. M.R. (2023).
           Shortest path problems on different geometric surfaces: Reasoning about linearity through development. <i>Developmental Psychology.</i>
-          <br>
-          <a href="assets/studies/HueyJordan_etal_2023.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="https://psycnet.apa.org/record/2023-35044-001" target="_blank" class="external">Publisher's Page</a>
+          <div class="pub-links">
+            <a href="assets/studies/HueyJordan_etal_2023.pdf" target="_blank" class="external">Paper</a>
+            <a href="https://psycnet.apa.org/record/2023-35044-001" target="_blank" class="external">Publisher's Page</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Aboody, R., <b>Huey, H.,</b> & Jara-Ettinger, J. (2022).
           Preschoolers decide who is knowledgeable, who to inform, and who to trust via a causal understanding of how knowledge
           relates to action. <i>Cognition.</i>
-          <br>
-          <a href="assets/studies/predict-observe.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="https://www.sciencedirect.com/science/article/pii/S0010027722002001?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
+          <div class="pub-links">
+            <a href="assets/studies/predict-observe.pdf" target="_blank" class="external">Paper</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0010027722002001?via%3Dihub" target="_blank" class="external">Publisher's Page</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Jara-Ettinger, J., Floyd, S., <b>Huey, H.,</b> Tenenbaum, J.B., & Schulz, L. (2019).
           Social pragmatics: Four and five-year-olds rely on commonsense psychology to
           resolve referential ambiguities. <i>Child Development.</i>
-          <br>
-          <a href="assets/studies/Jara-Ettinger_et_al2019_Child_Development.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="https://srcd.onlinelibrary.wiley.com/doi/10.1111/cdev.13290" target="_blank" class="external">Publisher's Page</a>
+          <div class="pub-links">
+            <a href="assets/studies/Jara-Ettinger_et_al2019_Child_Development.pdf" target="_blank" class="external">Paper</a>
+            <a href="https://srcd.onlinelibrary.wiley.com/doi/10.1111/cdev.13290" target="_blank" class="external">Publisher's Page</a>
+          </div>
         </li>
+
         <br>
 
         <li class="text publication-text">
-          <div class="sub-pubs">peer-reviewed conference proceedings & posters</div>
+          <div class="sub-pubs fade-section">peer-reviewed conference proceedings & posters</div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           *Mukherjee, K., <b>*Huey, H.,</b> *Lu, X., Vinker, Y., Aguina-Kang, R., and Fan, J.E. (2023).
           SEVA: Leveraging sketches to evaluate alignment between human and machine visual abstraction.
           <i>Advances in Neural Information Processing Systems, Datasets and Benchmarks Track</i>.
           New Orleans, Lousiana: NeurIPS
-          <br>
-          <a href="assets/studies/mukherjee_neurips_2023.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="https://seva-benchmark.github.io/" target="_blank" class="external">Github</a>
+          <div class="pub-links">
+            <a href="assets/studies/mukherjee_neurips_2023.pdf" target="_blank" class="external">Paper</a>
+            <a href="https://seva-benchmark.github.io/" target="_blank" class="external">Github</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           <b>*Huey, H.,</b> *Oey, L.A., Lloyd, H.S., and Fan, J.E. (2023).
           How do communicative goals guide which data visualizations people think are effective?
           <i>Proceedings of the 45th Annual Conference of the Cognitive Science Society.</i>
           Sydney, Australia: Cognitive Science Society.
-          <br>
-          <a href="assets/studies/hueyoey_cogsci_2023.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="assets/studies/davinci_cogsci2023.pdf" target="_blank" class="external">Poster</a>
+          <div class="pub-links">
+            <a href="assets/studies/hueyoey_cogsci_2023.pdf" target="_blank" class="external">Paper</a>
+            <a href="assets/studies/davinci_cogsci2023.pdf" target="_blank" class="external">Poster</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           *Mukherjee, K., <b>*Huey, H.,</b> *Lu, X., Vinker, Y., Aguina-Kang, R., and Fan, J.E. (2023).
           Evaluating machine comprehension of sketch meaning at different levels of abstraction.
           <i>Proceedings of the 45th Annual Conference of the Cognitive Science Society.</i>
           Sydney, Australia: Cognitive Science Society.
-          <br>
-          <a href="assets/studies/mukherjee_cogsci_2023.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="assets/studies/VAB_CogSci_2023_poster.pdf" target="_blank" class="external">Poster</a>
+          <div class="pub-links">
+            <a href="assets/studies/mukherjee_cogsci_2023.pdf" target="_blank" class="external">Paper</a>
+            <a href="assets/studies/VAB_CogSci_2023_poster.pdf" target="_blank" class="external">Poster</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Lloyd, H.S., <b>Huey, H.,</b> Brockbank, E.,  Padilla, L., and Fan, J.E. (2023).
           What is graph comprehension and how do you measure it?
           <i>Proceedings of the 45th Annual Conference of the Cognitive Science Society.</i>
           Sydney, Australia: Cognitive Science Society.
-          <br>
-          <a href="assets/studies/GCB_cogsci2023_abstract.pdf" target="_blank" class="external">Abstract</a>&nbsp;&nbsp;
-          <a href="assets/studies/gcb_portrait.pdf" target="_blank" class="external">Poster</a>
+          <div class="pub-links">
+            <a href="assets/studies/GCB_cogsci2023_abstract.pdf" target="_blank" class="external">Abstract</a>
+            <a href="assets/studies/gcb_portrait.pdf" target="_blank" class="external">Poster</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           <b>*Huey, H.,</b> *Long, B., Yang, J., George, K., and Fan, J.E. (2022).
           Developmental changes in the semantic part structure of drawn objects.
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
-          <br>
-          <a href="assets/studies/hueylong_cogsci_2022.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="assets/studies/cogsci_kiddraw_annotations_2022_FINALPOSTER_6.pdf" target="_blank" class="external">Poster</a>
+          <div class="pub-links">
+            <a href="assets/studies/hueylong_cogsci_2022.pdf" target="_blank" class="external">Paper</a>
+            <a href="assets/studies/cogsci_kiddraw_annotations_2022_FINALPOSTER_6.pdf" target="_blank" class="external">Poster</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Nagabandi, M., Yang, J., <b>Huey, H.,</b> Fan, J.E. (2022).
           Decomposing objects into parts from vision and language.
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
-          <br>
-          <a href="assets/studies/partnaming_cogsci2023_abstract.pdf" target="_blank" class="external">Abstract</a>&nbsp;&nbsp;
+          <div class="pub-links">
+            <a href="assets/studies/partnaming_cogsci2023_abstract.pdf" target="_blank" class="external">Abstract</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           <b>Huey, H.,</b> Walker, C.M., & Fan, J.E. (2021).
           How do the semantic properties of visual explanations guide causal inference?
           <i>Proceedings of the 43rd Annual Conference of the Cognitive Science Society.</i>
           (Virtual Meeting) Vienna, Austria: Cognitive Science Society.
-          <br>
-          <a href="assets/studies/semanticproperties_510.pdf" target="_blank" class="external">Paper</a>&nbsp;&nbsp;
-          <a href="assets/studies/cogsci_poster_2021_final.pdf" target="_blank" class="external">Poster</a>&nbsp;&nbsp;
-          <a href="assets/studies/cogsci_poster_run2.mp4" target="_blank" class="external">Video</a>
+          <div class="pub-links">
+            <a href="assets/studies/semanticproperties_510.pdf" target="_blank" class="external">Paper</a>
+            <a href="assets/studies/cogsci_poster_2021_final.pdf" target="_blank" class="external">Poster</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           <b>Huey, H.,</b> Loncar, N., Jordan, M., & Dillon, M.R. (2019).
           A tale of paths between two points: Children's identification of linearity on different geometric surfaces.
           <i>Poster presented at the Biennial Meeting of the Society for Research in Child Development 2019.</i>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Loncar, N., <b>Huey, H.,</b> & Dillon, M.R. (2019).
           Infants fail to categorize forms by kinds.
           <i>Poster presented at the Biennial Meeting of the Society for Research in Child Development 2019.</i>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Aboody, R., <b>Huey, H.,</b> & Jara-Ettinger, J. (2018). Success does
           not imply knowledge: Preschoolers believe that accurate predictions reveal
           prior knowledge, but accurate observations do not.
           <i>Proceedings of the 40th Annual Conference of the Cognitive Science Society.</i>
-          <br>
-          <a href="assets/studies/Aboody_Huey_Jara-Ettinger_2018_CogSci.pdf" target="_blank" class="external">Paper</a>
+          <div class="pub-links">
+            <a href="assets/studies/Aboody_Huey_Jara-Ettinger_2018_CogSci.pdf" target="_blank" class="external">Paper</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Aboody, R., <b>Huey, H.,</b> & Jara-Ettinger, J. (2017).
           Success does not imply knowledge: Preschoolers believe that accurate predictions reveal prior knowledge,
           but accurate observations do not.
           <i>Poster presented at the Cognitive Development Society's Bi-Annual Meeting 2017.</i>
-          <br>
-          <a href="assets/studies/CDS_poster_2017.pdf" target="_blank" class="external">Poster</a>
+          <div class="pub-links">
+            <a href="assets/studies/CDS_poster_2017.pdf" target="_blank" class="external">Poster</a>
+          </div>
         </li>
 
         <br>
 
         <li class="text publication-text">
-          <div class="sub-pubs">workshop presentations</div>
+          <div class="sub-pubs fade-section">workshop presentations</div>
         </li>
 
-        <li class="text indiv-pub-text"> 
+        <li class="text indiv-pub-text fade-section">
           Mukherjee, K., <b>Huey, H.,</b> Rogers, T., & Fan. J.E. (2022).
           From Images to Symbols: Drawing as a Window into the Mind.
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
           <b>Co-organizer of workshop & co-designer of website.</b>
-          <br>
-          <a href="https://images2symbols.github.io/" class="external">Website</a>&nbsp;&nbsp;
-          <a href="assets/studies/images2symbols.pdf" target="_blank" class="external">Workshop Overview</a>
+          <div class="pub-links">
+            <a href="https://images2symbols.github.io/" class="external">Website</a>
+            <a href="assets/studies/images2symbols.pdf" target="_blank" class="external">Workshop Overview</a>
+          </div>
         </li>
 
-        <li class="text indiv-pub-text">
+        <li class="text indiv-pub-text fade-section">
           Pitt, B., <b>Huey, H.,</b> Jordan, M., Hart, Y., Dillon, M.R.,
           Bottini, R., Carstensen, A., Boni, I., Piantadosi, S., Gibson, E., Marghetis, T.,
           Holmes, K.J., Star-Lack, M., & Chacon, S., (2022).
@@ -452,12 +422,12 @@
           <i>Proceedings of the 44th Annual Conference of the Cognitive Science Society.</i>
           Toronto, Canada: Cognitive Science Society.
           <b>Invited speaker.</b>
-          <br>
-          <a href="assets/studies/diverse_spatialcognition.pdf" target="_blank" class="external" role="button">Workshop Overview</a>
+          <div class="pub-links">
+            <a href="assets/studies/diverse_spatialcognition.pdf" target="_blank" class="external">Workshop Overview</a>
+          </div>
         </li>
       </ul>
     </div>
-  </div>
 
   <!-- Contact Icons -->
   <div id="social-wrappper" class="site-footer">
@@ -466,16 +436,6 @@
         <img src="assets/social-icons/linkedin-outline.svg" class="social-icons">
       </a>
     </button>
-    <!-- <button type="button" class="btn social-button">
-      <a href="https://github.com/hollyhuey">
-        <img src="assets/social-icons/github-outline.svg" class="social-icons">
-      </a>
-    </button> -->
-    <!-- <button type="button" class="btn social-button">
-      <a href="https://twitter.com/hollyahuey">
-        <img src="assets/social-icons/twitter-outline.png" class="social-icons">
-      </a>
-    </button> -->
     <button type="button" class="btn social-button">
       <a href="mailto:hhuey@adobe.com">
         <img src="assets/social-icons/email-outline.svg" class="social-icons">
@@ -487,80 +447,80 @@
       </a>
     </button>
   </div>
-  <div id="design-credit">
-    <p style="opacity: .5;">Human-made. Designed by me. Please excuse any coding errors. I hand-coded this in my first year of grad school to teach myself front-end design and am now paying for the sins of my poor coding practices from 2019 (pre-GenAI era)...</p>
-  </div>
+  <!-- <div id="design-credit">
+    <p style="opacity: .5;"></p>
+  </div> -->
+  </div> <!-- end #background -->
 
-  <!-- note: for some reason, there's a scoping error if this is moved to animation.js -->
   <script>
     let slideIndex = 1;
     showSlides(slideIndex);
-    
+
     function currentSlide(n) {
       showSlides(slideIndex = n);
     }
-    
+
     function showSlides(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot_4");
-      if (n > slides.length) {slideIndex = 1}    
+      if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex-1].style.display = "block";  
+      slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
     }
 
     let slideIndex_2 = 1;
     showSlides_2(slideIndex_2);
-    
+
     function currentSlide_2(n) {
       showSlides_2(slideIndex_2 = n);
     }
-    
+
     function showSlides_2(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides_2");
       let dots = document.getElementsByClassName("dot_2");
-      if (n > slides.length) {slideIndex_2 = 1}    
+      if (n > slides.length) {slideIndex_2 = 1}
       if (n < 1) {slideIndex_2 = slides.length}
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex_2-1].style.display = "block";  
+      slides[slideIndex_2-1].style.display = "block";
       dots[slideIndex_2-1].className += " active";
     }
 
     let slideIndex_3 = 1;
     showSlides_3(slideIndex_3);
-    
+
     function currentSlide_3(n) {
       showSlides_3(slideIndex_3 = n);
     }
-    
+
     function showSlides_3(n) {
       let i;
       let slides = document.getElementsByClassName("mySlides_3");
       let dots = document.getElementsByClassName("dot_3");
-      if (n > slides.length) {slideIndex_3 = 1}    
+      if (n > slides.length) {slideIndex_3 = 1}
       if (n < 1) {slideIndex_3 = slides.length}
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex_3-1].style.display = "block";  
+      slides[slideIndex_3-1].style.display = "block";
       dots[slideIndex_3-1].className += " active";
     }
-    </script>
+  </script>
 </body>
 </html>

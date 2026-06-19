@@ -1,9 +1,8 @@
-// write typing text
-window.onload = function() {
-  // https://github.com/mattboldt/typed.js/
+window.onload = function () {
+
+  // Typing animation
   new Typed('#typing-text', {
     strings: ["COMMUNICATE OUR IDEAS?", "BE MORE CREATIVE?", "IMPROVE OUR ENVIRONMENTS?"],
-    // strings: ["COMMUNICATE?", "LEARN?", "^500DRIVE CHANGE?"],
     typeSpeed: 60,
     backDelay: 1500,
     fadeOut: false,
@@ -13,17 +12,49 @@ window.onload = function() {
     showCursor: false
   });
 
-  // mouseover to switch headshots
-  // $('#headshot').hover(function() {
-  //   $(this).attr('src', 'assets/photos/headshot-sketch2.png');
-  // }, function() {
-  //   $(this).attr('src', 'assets/photos/headshot.png');
-  // });
+  // Sticky nav — slide in after scrolling 80% past the hero
+  const stickyNav = document.getElementById('sticky-nav');
+  const hero = document.getElementById('landing_background');
+  const scrollHint = document.querySelector('.scroll-hint');
+  const heroGradient = document.querySelector('.hero-gradient');
 
-}; // close window onload
+  function updateOnScroll() {
+    const heroThreshold = hero ? hero.offsetHeight * 0.8 : window.innerHeight * 0.8;
+    const hintThreshold = window.innerHeight * 0.4;
 
-// function menuOnClick() {
-//   document.getElementById("menu-bar").classList.toggle("change");
-//   document.getElementById("hamburger").classList.toggle("change");
-//   document.getElementById("menu-bg").classList.toggle("change-bg");
-// }
+    // Sticky nav
+    if (window.scrollY > heroThreshold) {
+      stickyNav.classList.add('visible');
+      stickyNav.removeAttribute('aria-hidden');
+    } else {
+      stickyNav.classList.remove('visible');
+      stickyNav.setAttribute('aria-hidden', 'true');
+    }
+
+    // Scroll hint + gradient — hide once user has scrolled noticeably
+    if (window.scrollY > hintThreshold) {
+      scrollHint?.classList.add('hidden');
+      heroGradient?.classList.add('hidden');
+    } else {
+      scrollHint?.classList.remove('hidden');
+      heroGradient?.classList.remove('hidden');
+    }
+  }
+
+  window.addEventListener('scroll', updateOnScroll, { passive: true });
+
+  // Scroll-triggered fade-ins
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06 });
+
+  document.querySelectorAll('.fade-section').forEach(function (el) {
+    observer.observe(el);
+  });
+
+};
