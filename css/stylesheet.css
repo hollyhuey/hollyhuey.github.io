@@ -684,20 +684,15 @@ input, button, select, optgroup, textarea {
     line-height: 1.5em;
   }
 
-  #bio-research p,
-  #bio-publications p {
+  #bio-research p:not(.text-footer),
+  #bio-publications p:not(.text-footer) {
     font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .text-footer {
     font-size: 11px;
     line-height: 16px;
-  }
-
-  /* 1. Research & publication text — fix inherited line-height causing double-spacing */
-  #bio-research p,
-  #bio-publications p {
-    line-height: 1.5;
   }
 
   /* 2. Header hierarchy — h1 bigger than sub-research */
@@ -718,18 +713,23 @@ input, button, select, optgroup, textarea {
   #hero-navigation-bar nav ul { line-height: 3.2em; }
   #hero-navigation-bar a.nav { font-size: 1.35rem; padding: 14px 10px; }
 
-  /* 5. Research figure captions — match bio footer size and color */
-  #bio-research .text-footer {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
+  /* 1. Headshot — fully centered (zero out base margin-left on headshot-span) */
+  headshot-span {
+    margin-left: 0;
+    margin-right: 0;
   }
-
-  /* 2. Headshot — centered */
   #headshot-content { text-align: center; }
 
-  /* 3. Reduce gap between typing text and bio text */
+  /* 2. Reduce gap between typing text and bio text */
   #bio-header { margin-bottom: 0; }
+  .bio-text-desc { margin-top: 0.5em; }
+
+  /* 3. Space between hero desc and nav; shift illustration lower */
+  #hero-navigation-bar { margin-top: 2em; }
+  #landing_background::before { background-position: 50% 8%; }
+
+  /* 4. Research figure captions — same as bio footer (11px, #666) */
+  /* Removed override — global .text-footer { font-size: 11px } applies */
 
   /* 4. Sticky nav — show name, hamburger visible, links hidden until toggled */
   #sticky-name { display: block; }
