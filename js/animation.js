@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
 
   // Typing animation
   new Typed('#typing-text', {
@@ -86,4 +86,4 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 
-};
+})();
