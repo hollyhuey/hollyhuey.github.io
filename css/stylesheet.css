@@ -61,6 +61,10 @@ a#publications {
 
 a#about {
   display: block;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
 }
 
 /* STICKY NAV ================================= */
