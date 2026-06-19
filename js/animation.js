@@ -43,6 +43,14 @@ window.onload = function () {
 
   window.addEventListener('scroll', updateOnScroll, { passive: true });
 
+  // Landing nav tap feedback (mobile)
+  document.querySelectorAll('#hero-navigation-bar a.nav').forEach(function (link) {
+    link.addEventListener('click', function () {
+      link.classList.add('tapped');
+      setTimeout(function () { link.classList.remove('tapped'); }, 600);
+    });
+  });
+
   // Hamburger menu (mobile sticky nav)
   const hamburger = document.getElementById('hamburger');
   const stickyNavLinks = document.getElementById('sticky-nav-links');

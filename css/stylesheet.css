@@ -56,7 +56,7 @@ img { vertical-align: middle; }
 a#about,
 a#research,
 a#publications {
-  scroll-margin-top: 64px;
+  scroll-margin-top: 72px;
 }
 
 a#about {
@@ -339,9 +339,15 @@ headshot-span {
 }
 
 #typing-wrapper {
-  height: 4.5em;
+  height: 2em;
   overflow: hidden;
 }
+
+/* Hide the <br> before typing text on desktop — show only on mobile */
+typy br { display: none; }
+
+/* Mobile illustration in hero — hidden on desktop */
+.hero-illustration-mobile { display: none; }
 
 /* RESEARCH =================================== */
 
@@ -718,14 +724,30 @@ input, button, select, optgroup, textarea {
   /* 3. Hero description — more space between stacked lines */
   .hero-desc-item { margin-bottom: 14px; }
 
-  /* 4. Landing nav — bigger, block-level so padding creates real tap height */
-  #hero-navigation-bar nav ul { line-height: normal; gap: 4px; }
+  /* Tap feedback — show underline on click, JS removes .tapped after delay */
+  #hero-navigation-bar a.nav.tapped::after {
+    transform: scaleX(1);
+  }
+
+  /* 4. Landing nav — inline-block so underline only spans word width */
+  #hero-navigation-bar nav ul { line-height: normal; gap: 0; }
   #hero-navigation-bar nav ul li { width: 100%; text-align: center; }
   #hero-navigation-bar a.nav {
-    display: block;
+    display: inline-block;
     font-size: 1.35rem;
-    padding: 10px;
+    padding: 12px 10px;
   }
+
+  /* Mobile illustration — show between description and nav, hide ::before */
+  .hero-illustration-mobile {
+    display: block;
+    width: 82%;
+    margin: 1.2em auto 0;
+  }
+  #landing_background::before { background-image: none; }
+
+  /* Show <br> before typing text on mobile */
+  typy br { display: inline; }
 
   /* 1. Headshot — fully centered (zero out base margin-left on headshot-span) */
   headshot-span {
