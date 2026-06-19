@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
 
   // Typing animation
   new Typed('#typing-text', {

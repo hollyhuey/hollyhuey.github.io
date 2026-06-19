@@ -672,8 +672,8 @@ input, button, select, optgroup, textarea {
   #bio-header { text-align: center; }
 
   #typing-wrapper {
-    height: auto;
-    overflow: visible;
+    height: 50px;
+    overflow: hidden;
   }
 
   typy {
@@ -760,8 +760,8 @@ input, button, select, optgroup, textarea {
   #bio-header { margin-bottom: 0; }
   .bio-text-desc { margin-top: 0.5em; }
 
-  /* 3. Space between hero desc and nav; shift illustration lower */
-  #hero-navigation-bar { margin-top: 2em; }
+  /* 3. Tighten space so resume stays visible above phone browser chrome */
+  #hero-navigation-bar { margin-top: 0.4em; }
   #landing_background::before { background-position: 50% 8%; }
 
   /* 4. Research figure captions — same as bio footer (11px, #666) */
