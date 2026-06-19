@@ -216,6 +216,8 @@ a#publications {
   color: #09AD94;
 }
 
+.hero-desc-sep { padding: 0 4px; }
+
 #hero-description,
 #hero-navigation-bar {
   font-size: clamp(1rem, 2.5vw, 1.7rem);
