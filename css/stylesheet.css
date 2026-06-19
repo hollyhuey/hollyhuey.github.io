@@ -9,6 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 p, h1, .text {
   font-family: "Proxima Nova", "Roboto", sans-serif;
   font-weight: 400;
@@ -52,6 +57,10 @@ a#about,
 a#research,
 a#publications {
   scroll-margin-top: 64px;
+}
+
+a#about {
+  display: block;
 }
 
 /* STICKY NAV ================================= */
@@ -709,9 +718,14 @@ input, button, select, optgroup, textarea {
   /* 3. Hero description — more space between stacked lines */
   .hero-desc-item { margin-bottom: 14px; }
 
-  /* 4. Landing nav — bigger, more tappable */
-  #hero-navigation-bar nav ul { line-height: 3.2em; }
-  #hero-navigation-bar a.nav { font-size: 1.35rem; padding: 14px 10px; }
+  /* 4. Landing nav — bigger, block-level so padding creates real tap height */
+  #hero-navigation-bar nav ul { line-height: normal; gap: 4px; }
+  #hero-navigation-bar nav ul li { width: 100%; text-align: center; }
+  #hero-navigation-bar a.nav {
+    display: block;
+    font-size: 1.35rem;
+    padding: 10px;
+  }
 
   /* 1. Headshot — fully centered (zero out base margin-left on headshot-span) */
   headshot-span {
