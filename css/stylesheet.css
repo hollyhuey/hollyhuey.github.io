@@ -760,8 +760,8 @@ input, button, select, optgroup, textarea {
   #bio-header { margin-bottom: 0; }
   .bio-text-desc { margin-top: 0.5em; }
 
-  /* 3. Tighten space so resume stays visible above phone browser chrome */
-  #hero-navigation-bar { margin-top: 0.4em; }
+  /* 3. Nav overlaps illustration bottom so resume stays fully visible */
+  #hero-navigation-bar { margin-top: -55px; }
   #landing_background::before { background-position: 50% 8%; }
 
   /* 4. Research figure captions — same as bio footer (11px, #666) */
