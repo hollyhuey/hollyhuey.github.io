@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <link rel="stylesheet" href="css/stylesheet-animated-hero.css">
-  <script type="text/javascript" src="js/animation.js"></script>
+  <script type="text/javascript" src="js/animation.js?v=2"></script>
 </head>
 
 <body>
@@ -29,8 +29,11 @@
 
   <!-- Sticky nav (hidden until user scrolls past hero) -->
   <header id="sticky-nav" aria-hidden="true">
-    <span id="sticky-name">Holly Huey<span class="sticky-dot">.</span></span>
-    <nav>
+    <a href="#" id="sticky-name" style="text-decoration:none;color:inherit;">Holly Huey<span class="sticky-dot">.</span></a>
+    <button id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="sticky-nav-links">
       <ul>
         <li><a href="#about" class="nav text">about</a></li>
         <li><a href="#research" class="nav text">research</a></li>
@@ -50,7 +53,10 @@
             </p>
           </div>
           <div id="hero-description" class="in-down">
-            <p>Applied Scientist @ Adobe | Experimental Psychology, PhD | Improving GenAI technologies to enhance human creativity
+            <p>
+              <span class="hero-desc-item">Applied Scientist @ Adobe</span><span class="hero-desc-sep"> | </span>
+              <span class="hero-desc-item">Experimental Psychology, PhD</span><span class="hero-desc-sep"> | </span>
+              <span class="hero-desc-item">Improving GenAI technologies to enhance human creativity</span>
             </p>
           </div>
           <div id="hero-navigation-bar" class="text in-down">

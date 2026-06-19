@@ -43,6 +43,22 @@ window.onload = function () {
 
   window.addEventListener('scroll', updateOnScroll, { passive: true });
 
+  // Hamburger menu (mobile sticky nav)
+  const hamburger = document.getElementById('hamburger');
+  const stickyNavLinks = document.getElementById('sticky-nav-links');
+  if (hamburger && stickyNavLinks) {
+    hamburger.addEventListener('click', function () {
+      const open = stickyNavLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    stickyNavLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        stickyNavLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   // Lightbox for research figures
   if (typeof GLightbox !== 'undefined') {
     GLightbox({ selector: '.glightbox' });

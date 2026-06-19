@@ -692,9 +692,96 @@ input, button, select, optgroup, textarea {
     line-height: 16px;
   }
 
-  .indiv-pub-text { font-size: 0.7em; }
+  /* 1. Publications — consistent size, reduce double-spacing */
+  ul.publications { font-size: 0.9rem; }
+  ul.publications li { margin: 12px 0; }
+  .sub-pubs { font-size: 1rem; }
+  .indiv-pub-text { font-size: 0.9rem; }
+  .publication-text { font-size: 0.9rem; }
 
-  .publication-text { font-size: 0.65em; }
+  /* 2. Headshot — centered */
+  #headshot-content { text-align: center; }
 
-  #sticky-name { display: none; }
+  /* 3. Reduce gap between typing text and bio text */
+  #bio-header { margin-bottom: 0; }
+
+  /* 4. Sticky nav — show name, hamburger visible, links hidden until toggled */
+  #sticky-name { display: block; }
+  #hamburger { display: flex; }
+  #sticky-nav-links { display: none; }
+
+  /* 5. Landing nav — vertical stacked list */
+  #hero-navigation-bar nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.2em;
+    margin: 0;
+  }
+  #hero-navigation-bar nav ul li {
+    display: block;
+    margin-right: 0;
+  }
+
+  /* 6. Hero description — hide separators, stack lines */
+  .hero-desc-sep { display: none; }
+  .hero-desc-item { display: block; }
+}
+
+/* =============================================
+   HAMBURGER + DROPDOWN (base styles, all sizes)
+   ============================================= */
+#hamburger {
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+#hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Hide hamburger on desktop */
+@media (min-width: 577px) {
+  #hamburger { display: none; }
+}
+
+/* Dropdown panel when open */
+#sticky-nav-links.open {
+  display: block;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #e8e8e8;
+  padding: 8px 0;
+  z-index: 99;
+}
+
+#sticky-nav-links.open ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: normal;
+  font-size: 1rem;
+}
+
+#sticky-nav-links.open ul li {
+  display: block;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }
