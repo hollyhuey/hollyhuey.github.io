@@ -743,12 +743,15 @@ input, button, select, optgroup, textarea {
   .hero-illustration-mobile {
     display: block;
     width: 82%;
-    margin: 0 auto;
+    margin: -30px auto 0;
   }
   #landing_background::before { background-image: none; }
 
   /* Show <br> before typing text on mobile */
   typy br { display: inline; }
+
+  /* Tighten scroll offset for #about on mobile — anchor sits just above headshot */
+  a#about { scroll-margin-top: 56px; }
 
   /* 1. Headshot — fully centered (zero out base margin-left on headshot-span) */
   headshot-span {
