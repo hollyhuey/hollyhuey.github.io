@@ -52,6 +52,10 @@ img { vertical-align: middle; }
   padding-top: 2em;
 }
 
+#bio-research {
+  padding-top: 0;
+}
+
 /* SCROLL TARGETS — offset for sticky nav height */
 a#about,
 a#research,
