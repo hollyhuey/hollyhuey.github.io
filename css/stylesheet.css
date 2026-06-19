@@ -692,12 +692,29 @@ input, button, select, optgroup, textarea {
     line-height: 16px;
   }
 
-  /* 1. Publications — consistent size, reduce double-spacing */
+  /* 1. Research & publication text — fix inherited line-height causing double-spacing */
+  #bio-research p,
+  #bio-publications p {
+    line-height: 1.5;
+  }
+
+  /* 2. Header hierarchy — h1 bigger than sub-research */
+  h1 { font-size: 1.6rem; }
+  .sub-research { font-size: 0.95rem; }
+  .sub-pubs { font-size: 0.95rem; }
+
+  /* Publications — consistent size, reduce double-spacing */
   ul.publications { font-size: 0.9rem; }
-  ul.publications li { margin: 12px 0; }
-  .sub-pubs { font-size: 1rem; }
+  ul.publications li { margin: 12px 0; line-height: 1.5; }
   .indiv-pub-text { font-size: 0.9rem; }
   .publication-text { font-size: 0.9rem; }
+
+  /* 3. Hero description — space between stacked lines */
+  .hero-desc-item { margin-bottom: 6px; }
+
+  /* 4. Landing nav — bigger, more tappable */
+  #hero-navigation-bar nav ul { line-height: 2.8em; }
+  #hero-navigation-bar a.nav { font-size: 1.15rem; padding: 12px 10px; }
 
   /* 2. Headshot — centered */
   #headshot-content { text-align: center; }
