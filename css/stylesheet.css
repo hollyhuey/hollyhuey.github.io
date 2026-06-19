@@ -614,9 +614,25 @@ input, button, select, optgroup, textarea {
    MOBILE  ≤576px
    ============================================= */
 @media (max-width: 576px) {
+  /* 1. Illustration — wider on mobile */
+  #landing_background::before {
+    background-size: 95%;
+  }
+
+  /* 2. Period dot — smaller so it reads as a period, not a floating blob */
+  .period-dot {
+    font-size: 2.5rem;
+    vertical-align: baseline;
+  }
+
   #hero-header { line-height: 1em; }
 
+  /* 3. Nav — single line */
   nav ul li { margin-right: 4px; }
+
+  /* 4. Reduce hero height so gap below landing isn't so large */
+  #landing-page-content { height: 100vh; }
+  #hero-content { margin-bottom: 8%; }
 
   #background { background-size: 200%; }
 
@@ -626,26 +642,54 @@ input, button, select, optgroup, textarea {
     text-align: center;
   }
 
+  /* 5. Headshot — tighter bottom margin */
   #headshot {
     float: none;
     display: block;
     height: 8em;
-    margin: 1em auto 0.5em;
+    margin: 1em auto 0;
     padding: 0;
   }
 
-  .bio-text-desc {
-    font-size: 0.85rem;
-    line-height: 1.4em;
+  /* 6. Typing text — bigger, centered, green text on its own line */
+  #bio-header { text-align: center; }
+
+  #typing-wrapper {
+    height: auto;
+    overflow: visible;
   }
 
-  typy { font-size: 12px; }
+  typy {
+    font-size: 15px;
+    display: block;
+  }
 
-  #typing-text { font-size: 12px; }
+  #typing-text {
+    font-size: 17px;
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* 7. Section spacing — less padding between sections */
+  .line-transition {
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+
+  /* 8. Consistent paragraph sizes across bio & research */
+  .bio-text-desc {
+    font-size: 0.9rem;
+    line-height: 1.5em;
+  }
+
+  #bio-research p,
+  #bio-publications p {
+    font-size: 0.9rem;
+  }
 
   .text-footer {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 11px;
+    line-height: 16px;
   }
 
   .indiv-pub-text { font-size: 0.7em; }

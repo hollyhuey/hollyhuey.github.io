@@ -43,6 +43,11 @@ window.onload = function () {
 
   window.addEventListener('scroll', updateOnScroll, { passive: true });
 
+  // Lightbox for research figures
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({ selector: '.glightbox' });
+  }
+
   // Scroll-triggered fade-ins
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
