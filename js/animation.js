@@ -44,14 +44,15 @@
   window.addEventListener('scroll', updateOnScroll, { passive: true });
 
   // Chevron click — scroll to bio/headshot section
-  const scrollHintBtn = document.querySelector('.scroll-hint');
+  var scrollHintBtn = document.querySelector('.scroll-hint');
   if (scrollHintBtn) {
     scrollHintBtn.style.cursor = 'pointer';
     scrollHintBtn.addEventListener('click', function () {
-      const target = document.getElementById('headshot-content');
-      if (target) {
-        const top = target.getBoundingClientRect().top + window.scrollY - 32;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+      var anchor = document.getElementById('about');
+      if (anchor) {
+        var scrollMargin = parseInt(getComputedStyle(anchor).scrollMarginTop) || 0;
+        var targetY = anchor.getBoundingClientRect().top + window.scrollY - scrollMargin;
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
       }
     });
   }
