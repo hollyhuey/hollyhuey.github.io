@@ -43,6 +43,19 @@
 
   window.addEventListener('scroll', updateOnScroll, { passive: true });
 
+  // Chevron click — scroll to bio/headshot section
+  const scrollHintBtn = document.querySelector('.scroll-hint');
+  if (scrollHintBtn) {
+    scrollHintBtn.style.cursor = 'pointer';
+    scrollHintBtn.addEventListener('click', function () {
+      const target = document.getElementById('headshot-content');
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - 32;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  }
+
   // Landing nav tap feedback (mobile)
   document.querySelectorAll('#hero-navigation-bar a.nav').forEach(function (link) {
     link.addEventListener('click', function () {
