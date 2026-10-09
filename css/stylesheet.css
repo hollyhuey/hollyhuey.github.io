@@ -355,7 +355,7 @@ headshot-span {
 }
 
 #typing-wrapper {
-  height: 2em;
+  height: 1.4em;
   overflow: hidden;
 }
 
@@ -388,6 +388,10 @@ typy br { display: none; }
   margin-top: 10px;
   color: #666;
 }
+
+/* Tighten space below the bio / academic odyssey section */
+#bio-main { padding-bottom: 1.5em; }
+#bio-main .text-footer { margin-bottom: 0; }
 
 .extra-research { margin-top: 20px; }
 .research-text { margin-top: 20px; }
@@ -590,8 +594,10 @@ input, button, select, optgroup, textarea {
 @media (max-width: 1000px) {
   .bio-text-desc {
     font-size: 1em;
-    margin-top: 2em;
+    margin-top: 0.5em;
   }
+
+  #typing-wrapper { height: 2.4em; }
 
   .grid-container { grid-template-columns: 100%; }
 
@@ -614,7 +620,7 @@ input, button, select, optgroup, textarea {
   .bio-text-desc {
     font-size: 0.8em;
     line-height: 1.5em;
-    margin-top: 2em;
+    margin-top: 0.5em;
   }
 
   typy {
@@ -624,7 +630,7 @@ input, button, select, optgroup, textarea {
 
   #typing-text { font-size: 20px; }
 
-  #typing-wrapper { height: 6em; }
+  #typing-wrapper { height: 2.2em; }
 
   .text-footer {
     font-size: 13px;
@@ -688,7 +694,7 @@ input, button, select, optgroup, textarea {
   #bio-header { text-align: center; }
 
   #typing-wrapper {
-    height: 50px;
+    height: 44px;
     overflow: hidden;
   }
 
@@ -708,6 +714,7 @@ input, button, select, optgroup, textarea {
     padding-top: 1em;
     padding-bottom: 2em;
   }
+  #bio-main { padding-bottom: 1em; }
 
   /* 8. Consistent paragraph sizes across bio & research */
   .bio-text-desc {
