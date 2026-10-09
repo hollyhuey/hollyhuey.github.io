@@ -26,6 +26,7 @@ h1 {
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   line-height: 1.2;
   text-align: left;
+  margin-bottom: 0.3em;
 }
 
 h3 {
@@ -408,6 +409,20 @@ typy br { display: none; }
   box-sizing: border-box;
 }
 
+/* Two research images side by side */
+.research-img-row {
+  display: flex;
+  gap: 1em;
+  width: 90%;
+  margin: 1em auto 0.5em;
+}
+.research-img-row a { flex: 1 1 0; min-width: 0; }
+.research-img-row .research-img {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .research-figures {
   width: 20em;
   max-width: 100%;
@@ -743,6 +758,9 @@ input, button, select, optgroup, textarea {
   ul.publications li { margin: 12px 0; line-height: 1.5; }
   .indiv-pub-text { font-size: 0.9rem; }
   .publication-text { font-size: 0.9rem; }
+
+  .research-img-row { gap: 0.5em; }
+  .research-img-row .research-img { padding: 6px; }
 
   /* 3. Hero description — tighter spacing on mobile */
   .hero-desc-item { margin-bottom: 6px; }
