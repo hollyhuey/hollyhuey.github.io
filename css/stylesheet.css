@@ -26,7 +26,6 @@ h1 {
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   line-height: 1.2;
   text-align: left;
-  margin-bottom: 0.3em;
 }
 
 h3 {
@@ -376,6 +375,9 @@ typy br { display: none; }
   color: #09AD94;
 }
 
+/* Tighten space between sub-headings and their first paragraph */
+.sub-research + div > p:first-child { margin-top: 0.3em; }
+
 .grid-container {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -413,7 +415,7 @@ typy br { display: none; }
 .research-img-row {
   display: flex;
   gap: 1em;
-  width: 90%;
+  width: 60%;
   margin: 1em auto 0.5em;
 }
 .research-img-row a { flex: 1 1 0; min-width: 0; }
