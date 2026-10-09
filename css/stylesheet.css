@@ -28,8 +28,14 @@ h1 {
   text-align: left;
 }
 
-h3 { color: #999; }
+h3 {
+  color: #09AD94;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
 strong { font-weight: bold; }
+.text-footer strong { color: #49A2A0; }
 
 span {
   display: inline-block;
