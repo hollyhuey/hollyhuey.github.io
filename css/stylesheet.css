@@ -61,7 +61,9 @@ img { vertical-align: middle; }
 
 #bio-research {
   padding-top: 0;
+  padding-bottom: 1.5em;
 }
+#bio-research .fade-section:last-child > .text-footer:last-child { margin-bottom: 0; }
 
 /* SCROLL TARGETS — offset for sticky nav height */
 a#about,
@@ -732,6 +734,7 @@ input, button, select, optgroup, textarea {
     padding-bottom: 2em;
   }
   #bio-main { padding-bottom: 1em; }
+  #bio-research { padding-bottom: 1em; }
 
   /* 8. Consistent paragraph sizes across bio & research */
   .bio-text-desc {
