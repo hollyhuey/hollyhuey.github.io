@@ -30,12 +30,13 @@ h1 {
 
 h3 {
   color: #09AD94;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.1em;
   margin-bottom: 0;
 }
+h3 + p { margin-top: 0; }
 strong { font-weight: bold; }
-.text-footer strong { color: #49A2A0; }
+.text-footer strong { color: #49A2A0; font-weight: normal; }
 
 span {
   display: inline-block;
