@@ -426,6 +426,8 @@ typy br { display: none; }
   width: 100%;
   margin: 0;
   box-sizing: border-box;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .research-figures {
