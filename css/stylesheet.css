@@ -372,7 +372,7 @@ typy br { display: none; }
 
 .sub-research {
   font-size: 125%;
-  font-weight: 600;
+  font-weight: normal;
   text-align: left;
   color: #09AD94;
 }
@@ -662,7 +662,7 @@ input, button, select, optgroup, textarea {
 
   .indiv-pub-text { font-size: 0.65em; }
 
-  .sub-pubs { font-size: 115%; }
+  .sub-research, .sub-pubs { font-size: 115%; }
 
   .research-figures { width: 15em; }
 
