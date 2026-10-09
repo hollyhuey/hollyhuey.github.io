@@ -417,7 +417,8 @@ typy br { display: none; }
 .research-img-row {
   display: flex;
   gap: 1em;
-  width: 60%;
+  align-items: center;
+  width: 80%;
   margin: 1em auto 0.5em;
 }
 .research-img-row a { flex: 1 1 0; min-width: 0; }
