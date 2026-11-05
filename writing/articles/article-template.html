@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+  ARTICLE TEMPLATE
+  1. Copy this file and rename it (e.g. my-first-article.html).
+  2. Replace everything marked "EDIT".
+  3. Add a link to the new file in writing/writing.html.
+  Paths use ../../ because articles live in writing/articles/.
+  The "FORMATTING EXAMPLES" in the body show every block style; delete what you don't need.
+-->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: short summary for search engines -->
+  <meta name="description" content="Article description">
+  <link rel="shortcut icon" type="image/png" href="../../assets/norm-site-icons/favicon.png">
+  <!-- EDIT: article title -->
+  <title>Article title | Holly Huey</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../css/stylesheet.css">
+  <link rel="stylesheet" href="article.css">
+</head>
+
+<body>
+  <div id="background">
+    <div id="wrapper" class="text">
+      <div id="article-wrapper">
+
+        <div class="article-topbar">
+          <a href="../writing.html" class="external article-back">&larr; Back to table of contents</a>
+          <div class="article-meta">
+            <!-- EDIT: dates (these also appear next to the article on writing.html) -->
+            <span class="article-date">Month Year</span><span class="article-edited">(last edited: Month Year)</span>
+          </div>
+        </div>
+
+        <div class="article-header">
+          <!-- EDIT: article title -->
+          <h1>Article title</h1>
+          <!-- EDIT: subtitle (delete the line if you don't want one) -->
+          <p class="article-subtitle">Optional subtitle goes here</p>
+        </div>
+
+        <div class="article-body">
+          <!-- EDIT: article content below -->
+
+          <!-- ===== FORMATTING EXAMPLES ===== -->
+
+          <!-- Normal paragraph, with bold, italic, and a link -->
+          <p>Opening paragraph with <strong>bold text</strong>, <em>italic text</em>, and a
+            <a href="https://example.com">link</a>. Replace this with your writing.</p>
+
+          <!-- Centered statement (big bold centered text) -->
+          <p class="article-statement">To provide <em>actionable</em> advice for those looking to transition</p>
+
+          <!-- Centered text (regular size). Wrap anything you want centered: paragraphs, images, etc. -->
+          <div class="article-center">
+            <p>This text is centered in the window.</p>
+          </div>
+
+          <!-- Section headings -->
+          <h2>Section heading</h2>
+          <h3>Smaller heading</h3>
+          <p>Paragraph under a heading.</p>
+
+          <!-- Bulleted list (use <ol> for a numbered list) -->
+          <ul>
+            <li>First bullet point</li>
+            <li>[best!] Second bullet point</li>
+          </ul>
+
+          <!-- Horizontal line -->
+          <hr>
+
+          <!-- Pull quote (orange bar on the left) -->
+          <blockquote>
+            <p>A pull quote or excerpt goes here.</p>
+            <p>Add more paragraphs if needed. <em>Italics work here too.</em></p>
+          </blockquote>
+
+          <!-- Callout block (gray rounded box) -->
+          <div class="article-callout">
+            <p>Subject line: Example line one</p>
+            <p>Subject line: Example line two</p>
+          </div>
+
+          <!-- Image with caption (put image files in assets/ and adjust the path) -->
+          <figure>
+            <img src="../../assets/figures/example.png" alt="Description of the image">
+            <figcaption>Optional caption</figcaption>
+          </figure>
+
+          <!-- Footnotes: reference in the text, matching <li> in the list below.
+               Multiple references can sit together: ...text<sup><a href="#fn1" id="ref1">1</a></sup><sup><a href="#fn2" id="ref2">2</a></sup> -->
+          <p>A sentence with a footnote.<sup><a href="#fn1" id="ref1">1</a></sup>
+            And another with two.<sup><a href="#fn2" id="ref2">2</a></sup><sup><a href="#fn3" id="ref3">3</a></sup></p>
+
+          <!-- ===== END FORMATTING EXAMPLES ===== -->
+
+          <!-- Footnote list (delete the whole block if you have no footnotes) -->
+          <div class="article-footnotes">
+            <ol>
+              <li id="fn1">First footnote text. <a href="#ref1" class="fn-back" aria-label="Back to text">&#8617;</a></li>
+              <li id="fn2">Second footnote text. <a href="#ref2" class="fn-back" aria-label="Back to text">&#8617;</a></li>
+              <li id="fn3">Third footnote text. <a href="#ref3" class="fn-back" aria-label="Back to text">&#8617;</a></li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

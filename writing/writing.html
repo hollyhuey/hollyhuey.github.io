@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Writing by Holly Huey">
+  <link rel="shortcut icon" type="image/png" href="../assets/norm-site-icons/favicon.png">
+  <title>Writing | Holly Huey</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../css/stylesheet.css">
+  <style>
+    /* Page-specific styles — edit freely */
+    #toc-wrapper { min-height: 100vh; }
+    .toc-back { display: inline-block; margin-top: 2em; font-size: 0.9em; }
+    .toc-list { list-style: none; padding: 0; margin: 0.2em 0 0; }
+    .toc-list li { padding: 0.2em 0; display: flex; justify-content: space-between; align-items: baseline; gap: 1.5em; }
+    .toc-section-desc { margin: 0.1em 0 0; font-size: 0.95em; }
+    .toc-title { font-size: 0.95em; }
+    .toc-meta { color: #666; font-size: 0.8em; text-align: right; white-space: nowrap; flex-shrink: 0; }
+    /* "(last edited: ...)" tags are hidden for now.
+       To show them, change "display: none" to "display: inline" below. */
+    .toc-edited { display: none; margin-left: 0.5em; color: #999; }
+    @media (max-width: 576px) {
+      .toc-list li { flex-direction: column; gap: 0.2em; }
+      .toc-meta { text-align: left; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="background">
+    <div id="wrapper" class="text">
+      <div id="toc-wrapper">
+
+        <a href="../index.html" class="external toc-back">&larr; Back to home</a>
+
+        <div class="line-transition">
+          <h1>some personal writing</h1>
+          <p>If we haven’t met yet, hi there 👋 If we have, it’s nice to connect with you here!</p>
+
+          <!-- Section: duplicate this block for each topic -->
+          <div class="sub-pubs">academia to industry</div>
+          <!-- <p class="toc-section-desc">Placeholder section description. A sentence or two about what this section covers.</p> -->
+          <ul class="toc-list">
+            <!-- Entry: duplicate this <li> for each article. Set href to the article file
+                 (e.g. articles/my-article.html). The date on the right is filled in
+                 automatically from that article's own date. -->
+            <li><div class="toc-title"><a href="readme.html" class="external">README</a></div></li>
+            <li><div class="toc-title"><a href="#" class="external">Placeholder article title two</a></div></li>
+            <li><div class="toc-title"><a href="#" class="external">Placeholder article title three</a></div></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    // Fill in each entry's date from the linked article's own page.
+    // (Needs the site served over http, e.g. localhost or GitHub Pages.)
+    document.querySelectorAll('.toc-list li').forEach(function (li) {
+      var link = li.querySelector('a[href]');
+      if (!link || link.getAttribute('href') === '#') return;
+      fetch(link.href)
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(function (html) {
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var date = doc.querySelector('.article-date');
+          var edited = doc.querySelector('.article-edited');
+          if (!date) return;
+          var meta = document.createElement('div');
+          meta.className = 'toc-meta';
+          meta.textContent = date.textContent.trim();
+          if (edited) {
+            var span = document.createElement('span');
+            span.className = 'toc-edited';
+            span.textContent = edited.textContent.trim();
+            meta.appendChild(span);
+          }
+          li.appendChild(meta);
+        })
+        .catch(function () {});
+    });
+  </script>
+</body>
+
+</html>
