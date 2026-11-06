@@ -184,4 +184,6 @@ crossout::after, .crossout::after {
 @media (max-width: 576px) {
   .article-body p, .article-body li { font-size: 0.95rem; }
   .article-statement { font-size: 1.1em !important; }
+  /* Subtitle matches paragraph text size on mobile */
+  .article-subtitle { font-size: 0.95rem; }
 }
