@@ -27,6 +27,8 @@
     .toc-edited { display: none; margin-left: 0.5em; color: #999; }
     /* Keep each title on one line on wide screens */
     @media (min-width: 1100px) { .toc-title { white-space: nowrap; } }
+    /* A bit more space under the section heading on non-mobile */
+    @media (min-width: 577px) { .toc-list { margin-top: 0.8em; } }
     @media (max-width: 576px) {
       .toc-list { grid-template-columns: 1fr; row-gap: 0.1em; }
       .toc-list .toc-title { margin-top: 0.5em; }
