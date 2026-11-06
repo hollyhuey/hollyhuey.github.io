@@ -32,7 +32,7 @@
           <a href="../table.html" class="external article-back">&larr; Back to table of contents</a>
           <div class="article-meta">
             <!-- EDIT: dates (these also appear next to the article on table.html) -->
-            <span class="article-date">Month Year</span><span class="article-edited">(last edited: Month Year)</span>
+            <span class="article-date">Month Day Year</span><span class="article-edited">(last edited: Month Day Year)</span>
           </div>
         </div>
 
@@ -52,6 +52,9 @@
           <p>Opening paragraph with <strong>bold text</strong>, <em>italic text</em>, and a
             <a href="https://example.com">link</a>. Replace this with your writing.</p>
 
+          <!-- Crossout: teal line through text, to show a correction -->
+          <p>I was <crossout>wrong about this</crossout> mistaken about that.</p>
+
           <!-- Centered statement (big bold centered text) -->
           <p class="article-statement">To provide <em>actionable</em> advice for those looking to transition</p>
 
@@ -65,10 +68,16 @@
           <h3>Smaller heading</h3>
           <p>Paragraph under a heading.</p>
 
-          <!-- Bulleted list (use <ol> for a numbered list) -->
+          <!-- Bulleted list with secondary bullets (use <ol> for a numbered list).
+               Put a nested <ul> inside the <li> it belongs to. -->
           <ul>
-            <li>First bullet point</li>
-            <li>[best!] Second bullet point</li>
+            <li><strong>Main bullet</strong> — Description of the main point.
+              <ul>
+                <li>Secondary bullet one</li>
+                <li>Secondary bullet two with <em>italic text</em></li>
+              </ul>
+            </li>
+            <li>[best!] Another main bullet</li>
           </ul>
 
           <!-- Horizontal line -->
@@ -98,6 +107,10 @@
             And another with two.<sup><a href="#fn2" id="ref2">2</a></sup><sup><a href="#fn3" id="ref3">3</a></sup></p>
 
           <!-- ===== END FORMATTING EXAMPLES ===== -->
+
+          <!-- AI disclosure: keep this line in every article -->
+          <hr>
+          <p class="article-note">AI was not used to write, edit, or brainstorm this post. All mistakes and em dashes are my own.</p>
 
           <!-- Footnote list (delete the whole block if you have no footnotes) -->
           <div class="article-footnotes">

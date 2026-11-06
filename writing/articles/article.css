@@ -20,7 +20,7 @@
 }
 .article-subtitle {
   font-family: "Proxima Nova", "Roboto", sans-serif;
-  font-size: 1.15em;
+  font-size: 1em;
   color: #888;
   margin: 0;
 }
@@ -60,11 +60,23 @@
   margin: 1.4em 0 0.4em;
 }
 
+/* Centered medium heading (e.g. a mid-section callout title) */
+.article-body h3.article-h-center { text-align: center; }
+
+/* ---------- Small bold sub-heading (h4) ---------- */
+.article-body h4 {
+  font-family: "Proxima Nova", "Roboto", sans-serif;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #333;
+  margin: 1.2em 0 0.2em;
+}
+
 /* ---------- Centered statement (big, bold, centered sans) ---------- */
 .article-statement {
   font-family: "Proxima Nova", "Roboto", sans-serif !important;
   font-weight: 700 !important;
-  font-size: 1.7em !important;
+  font-size: 1.3em !important;
   line-height: 1.25 !important;
   text-align: center;
   margin: 1.2em 0 !important;
@@ -75,9 +87,32 @@
 .article-center, .article-body center { display: block; text-align: center; }
 .article-center p, .article-center figure { text-align: center; }
 
+/* ---------- Crossout (teal felt-marker stroke through text, for corrections) ---------- */
+crossout, .crossout {
+  position: relative;
+  display: inline;
+  text-decoration: none;
+}
+crossout::after, .crossout::after {
+  content: "";
+  position: absolute;
+  left: -0.15em;
+  right: -0.15em;
+  top: 50%;
+  height: 0.75em;
+  transform: translateY(-50%) rotate(-0.6deg);
+  background: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20300%2040%22%20preserveAspectRatio=%22none%22%3E%3Cdefs%3E%3Cfilter%20id=%22m%22%20x=%22-5%25%22%20y=%22-20%25%22%20width=%22110%25%22%20height=%22140%25%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.18%200.45%22%20numOctaves=%224%22%20seed=%224%22%20result=%22n%22/%3E%3CfeDisplacementMap%20in=%22SourceGraphic%22%20in2=%22n%22%20scale=%2218%22%20xChannelSelector=%22R%22%20yChannelSelector=%22G%22%20result=%22d%22/%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.5%22%20numOctaves=%222%22%20seed=%229%22%20result=%22s%22/%3E%3CfeColorMatrix%20in=%22s%22%20type=%22matrix%22%20values=%220%200%200%200%200%20%200%200%200%200%200%20%200%200%200%200%200%20%200%200%200%20-7%205.0%22%20result=%22holes%22/%3E%3CfeComposite%20in=%22d%22%20in2=%22holes%22%20operator=%22in%22/%3E%3C/filter%3E%3C/defs%3E%3Crect%20x=%224%22%20y=%229%22%20width=%22292%22%20height=%2222%22%20rx=%228%22%20fill=%22%234DAA8E%22%20filter=%22url%28%23m%29%22/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
 /* ---------- Lists ---------- */
 .article-body ul, .article-body ol { padding-left: 1.6em; margin: 0 0 1.1em; }
 .article-body li { margin-bottom: 0.3em; }
+/* Secondary (nested) bullets: hollow circles, indented under the main bullet */
+.article-body ul { list-style-type: disc; }
+.article-body ul ul ul { list-style-type: square; }
+.article-body ul ul { list-style-type: circle; margin: 0.4em 0 0.3em; }
+.article-body ol ol { list-style-type: lower-alpha; margin: 0.4em 0 0.3em; }
 
 /* ---------- Pull quote (orange bar) ---------- */
 .article-body blockquote {
@@ -98,6 +133,8 @@
 .article-callout p { margin: 0 0 0.5em; }
 .article-callout p:last-child { margin-bottom: 0; }
 
+.article-callout hr { margin: 1em 0; }
+
 /* ---------- Horizontal rule ---------- */
 .article-body hr {
   border: none;
@@ -116,6 +153,14 @@
   margin-top: 0.6em;
 }
 
+/* ---------- Small note (AI disclosure line) ---------- */
+.article-body p.article-note {
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #666;
+  margin-top: 2em;
+}
+
 /* ---------- Footnotes ---------- */
 .article-body sup { font-size: 0.7em; line-height: 0; margin-left: 0.1em; }
 .article-body sup a { text-decoration: underline; }
@@ -126,12 +171,17 @@
   margin-top: 2.5em;
   padding-top: 1em;
 }
-.article-footnotes li { font-size: 0.85em; line-height: 1.5; }
+.article-footnotes li { font-size: 0.72em; line-height: 1.45; margin-bottom: 0.2em; }
 .article-footnotes .fn-back { text-decoration: none; margin-left: 0.3em; }
+/* When you click a footnote's back arrow, the matching number in the text turns orange.
+   Clicking another arrow moves the highlight (the previous number returns to teal). */
+.article-body sup a:target { color: #F2733A; font-weight: 700; }
+.article-body sup a[id] { scroll-margin-top: 6em; }
+
 /* Footnote jumped to from a reference gets a soft highlight */
 .article-footnotes li:target { background: #fff6d6; }
 
 @media (max-width: 576px) {
   .article-body p, .article-body li { font-size: 0.95rem; }
-  .article-statement { font-size: 1.35em !important; }
+  .article-statement { font-size: 1.1em !important; }
 }

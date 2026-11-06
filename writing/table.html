@@ -15,15 +15,21 @@
     #toc-wrapper { min-height: 100vh; }
     .toc-back { display: inline-block; margin-top: 2em; font-size: 0.9em; }
     .toc-list { list-style: none; padding: 0; margin: 0.2em 0 0; }
-    .toc-list li { padding: 0.2em 0; display: flex; justify-content: space-between; align-items: baseline; gap: 1.5em; }
+    /* Two columns: title | date. The title column automatically fits the longest title. */
+    .toc-list { display: grid; grid-template-columns: minmax(0, max-content) max-content; column-gap: 1em; row-gap: 0.4em; align-items: baseline; }
+    .toc-list li { display: contents; }
+    .sub-pubs { color: #888; }
     .toc-section-desc { margin: 0.1em 0 0; font-size: 0.95em; }
     .toc-title { font-size: 0.95em; }
-    .toc-meta { color: #666; font-size: 0.8em; text-align: right; white-space: nowrap; flex-shrink: 0; }
+    .toc-meta { color: #666; font-size: 0.8em; text-align: left; white-space: nowrap; }
     /* "(last edited: ...)" tags are hidden for now.
        To show them, change "display: none" to "display: inline" below. */
     .toc-edited { display: none; margin-left: 0.5em; color: #999; }
+    /* Keep each title on one line on wide screens */
+    @media (min-width: 1100px) { .toc-title { white-space: nowrap; } }
     @media (max-width: 576px) {
-      .toc-list li { flex-direction: column; gap: 0.2em; }
+      .toc-list { grid-template-columns: 1fr; row-gap: 0.1em; }
+      .toc-list .toc-title { margin-top: 0.5em; }
       .toc-meta { text-align: left; }
     }
   </style>
@@ -38,7 +44,7 @@
 
         <div class="line-transition">
           <h1>some personal writing</h1>
-          <p>If we haven’t met yet, hi there 👋 If we have, it’s nice to connect with you here!</p>
+          <p>If we haven’t met yet, hi 👋 If we have, it’s so nice to connect with you here</p>
 
           <!-- Section: duplicate this block for each topic -->
           <div class="sub-pubs">academia to industry</div>
@@ -48,8 +54,32 @@
                  (e.g. articles/my-article.html). The date on the right is filled in
                  automatically from that article's own date. -->
             <li><div class="toc-title"><a href="articles/readme.html" class="external">README</a></div></li>
-            <li><div class="toc-title"><a href="#" class="external">Placeholder article title two</a></div></li>
-            <li><div class="toc-title"><a href="#" class="external">Placeholder article title three</a></div></li>
+            <li><div class="toc-title"><a href="articles/about_me_2026.html" class="external">About Me in 2026: Table of Contents</a></div></li>
+            <li><div class="toc-title"><a href="articles/networking_for_introverts.html" class="external">Networking for introverts</a></div></li>
+            <li><div class="toc-title"><a href="articles/networking_misconceptions.html" class="external">Networking misconceptions</a></div></li>
+            <li><div class="toc-title"><a href="articles/human_readable_resumes.html" class="external">Resumes should be human-readable</a></div></li>
+            <li><div class="toc-title"><a href="articles/networking_email_formula.html" class="external">Writing networking emails: The basic formula</a></div></li>
+            <li><div class="toc-title"><a href="articles/referrals.html" class="external">Referrals: Helpful but (likely) not a deal-breaker</a></div></li>
+            <li><div class="toc-title"><a href="articles/resume_linkedin_website.html" class="external">Resume, LinkedIn, and the personal website. You need all 3.</a></div></li>
+            <li><div class="toc-title"><a href="articles/academia_industry_similarities.html" class="external">Academia and industry aren’t that different</a></div></li>
+            <li><div class="toc-title"><a href="articles/interview_questions.html" class="external">Always ask questions at the end of an interview</a></div></li>
+            <li><div class="toc-title"><a href="articles/luck_and_networking.html" class="external">It’s all about luck, but there are ways to make yourself luckier</a></div></li>
+            <li><div class="toc-title"><a href="articles/applying_to_industry_internships.html" class="external">Applying to industry internships during the PhD</a></div></li>
+            <li><div class="toc-title"><a href="articles/doing_industry_internships.html" class="external">Doing industry internships during your PhD</a></div></li>
+            <li><div class="toc-title"><a href="articles/no_internship.html" class="external">What if you can’t do an internship?</a></div></li>
+            <li><div class="toc-title"><a href="articles/be_transparent_with_advisor.html" class="external">Be transparent with your PhD advisor</a></div></li>
+            <li><div class="toc-title"><a href="articles/job_hunting_tips.html" class="external">Random job hunting tips</a></div></li>
+            <li><div class="toc-title"><a href="articles/negotiating_job_offer.html" class="external">Negotiating the job offer</a></div></li>
+            <li><div class="toc-title"><a href="articles/first_365_days.html" class="external">The first 365 days of your first job in industry</a></div></li>
+            <li><div class="toc-title"><a href="articles/mentors_in_industry.html" class="external">Mentors in industry</a></div></li>
+            <li><div class="toc-title"><a href="articles/stay_in_academia.html" class="external">Stay in academia if it’s your dream</a></div></li>
+            <li><div class="toc-title"><a href="articles/industry_is_just_work.html" class="external">Only academics call it “industry”, but to everyone else it’s just called “work”</a></div></li>
+            <li><div class="toc-title"><a href="articles/other_side_1_networking_chats.html" class="external">On the other side #1: How I choose which grad/undergrad students I am able to have networking chats with</a></div></li>
+            <li><div class="toc-title"><a href="articles/other_side_2_interviewing_grad_students.html" class="external">On the other side #2: What I look for when interviewing grad students</a></div></li>
+            <li><div class="toc-title"><a href="articles/other_side_3_converting_contractors.html" class="external">On the other side #3: What I look for when converting contractors to full-time</a></div></li>
+            <li><div class="toc-title"><a href="articles/recruiters_and_calls.html" class="external">Recruiters & recruiter calls</a></div></li>
+            <li><div class="toc-title"><a href="articles/ignore_job_descriptions.html" class="external">You can mostly ignore job descriptions</a></div></li>
+            <li><div class="toc-title"><a href="articles/public_speaking_resources.html" class="external">Some public speaking resources</a></div></li>
           </ul>
         </div>
 
@@ -57,11 +87,11 @@
     </div>
   </div>
   <script>
-    // Fill in each entry's date from the linked article's own page.
+    // Fill in each entry's date from the linked article's own page (the .article-date in that article).
     // (Needs the site served over http, e.g. localhost or GitHub Pages.)
     document.querySelectorAll('.toc-list li').forEach(function (li) {
       var link = li.querySelector('a[href]');
-      if (!link || link.getAttribute('href') === '#') return;
+      if (!link || link.getAttribute('href') === '#' || li.querySelector('.toc-meta')) return;
       fetch(link.href)
         .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
         .then(function (html) {
