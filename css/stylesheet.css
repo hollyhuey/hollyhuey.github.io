@@ -484,6 +484,10 @@ typy br { display: none; }
 
 /* PUBLICATIONS =============================== */
 
+/* Make bolded author name (Huey, H.) in publications clearly bold.
+   Real Roboto 700 is loaded in index.html; this also pins the weight. */
+ul.publications b, ul.publications strong { font-weight: 700; color: #000; }
+.text-footer b { font-weight: 700; color: inherit; }
 .publication-text { font-size: 0.75em; }
 .indiv-pub-text { font-size: 0.75em; }
 .sub-pubs { font-size: 125%; color: #09AD94; }
